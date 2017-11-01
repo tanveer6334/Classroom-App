@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/routine"
+            android:icon="@android:drawable/ic_lock_idle_alarm"
+            android:title="Routine"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/contacts"
+            android:icon="@android:drawable/sym_action_call"
+            android:title="Contacts"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/assignment"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Assignment"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/exam"
+            android:icon="@android:drawable/ic_dialog_alert"
+            android:title="Exam"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/result"
+            android:title="Result"
+            android:icon="@drawable/ic_result"
+            tools:ignore="HardcodedText"/>
+        <item
+            android:id="@+id/info"
+            android:icon="@android:drawable/ic_input_get"
+
+            android:title="Information Center"
+            tools:ignore="HardcodedText" />
+    </group>
+    <item
+        android:title="Programming"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/programming_editor"
+                android:title="Online code compiler"/>
+            <item
+                android:id="@+id/solo_learn"
+                android:title="Complete Course, Get Certificate"/>
+            <item
+                android:id="@+id/python"
+                android:title="Python Tutorial"/>
+        </menu>
+    </item>
+
+    <item
+        android:icon="@drawable/ic_menu_share"
+        android:title="Communicate"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/google_classroom"
+                android:icon="@drawable/google_classroom"
+                android:title="Google Classroom" />
+            <item
+                android:id="@+id/chat"
+
+                android:icon="@drawable/ic_chat_black_24dp"
+                android:title="Chat"
+                tools:ignore="HardcodedText" />
+            <item
+                android:id="@+id/fb_group"
+                android:icon="@android:drawable/ic_menu_myplaces"
+                android:title="FB Group" />
+            <item
+                android:id="@+id/romjan_routine"
+                android:icon="@android:drawable/ic_menu_my_calendar"
+                android:title="Romjan Calendar" />
+        </menu>
+    </item>
+
+    <item
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Action"
+        tools:ignore="HardcodedText">
+        <menu>
+            <!--<item
+                android:id="@+id/user"
+                android:icon="?android:attr/fingerprintAuthDrawable"
+                android:title="User"
+                tools:targetApi="m" />-->
+            <item
+                android:id="@+id/log_in"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="Log In"
+                tools:ignore="HardcodedText" />
+            <item
+                android:id="@+id/log_out"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Log Out"
+                tools:ignore="HardcodedText" />
+
+            <item
+                android:id="@+id/exit"
+                android:icon="@android:drawable/ic_delete"
+                android:title="Exit" />
+        </menu>
+    </item>
+
+</menu>

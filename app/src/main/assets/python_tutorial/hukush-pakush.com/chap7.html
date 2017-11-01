@@ -1,0 +1,774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+    
+<!-- Mirrored from hukush-pakush.com/chap7 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা">
+
+        <link rel="preload" href="fonts/SolaimanLipi.woff" as="font">
+        <link rel="preload" href="fonts/halum.woff" as="font">
+
+        <title>হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা</title>
+
+        <link rel="stylesheet" href="css/pure-min.css">
+        <link rel="stylesheet" href="css/main-min1bce.css?v=6">
+        <link rel="stylesheet" href="css/night-min.css">
+        <link rel="stylesheet" href="css/codemirror-min.css">
+
+        <script src="js/codemirror-min.js"></script>
+        <script src="js/python-min.js"></script>
+        <script src="js/jquery.js"></script>
+
+        <style type="text/css">
+          .CodeMirror {
+            border: 1px solid #eee;
+          }
+          .CodeMirror-scroll {
+            height: auto;
+            overflow-y: hidden;
+            overflow-x: auto;
+            width: 100%;
+          }
+        </style>
+
+
+      
+      
+
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25498154-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>
+
+    </head>
+
+    <body>
+
+    
+    <div id="container">
+    	<div id="side">
+			 <div id="chapterbox">
+			 	<div class="chapter">
+			 		<a href="chap1.html">অধ্যায় ১ <br>
+			 		<span class="chapterdetails">মানুষ প্রোগ্রামিং কেন করে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap2.html">অধ্যায় ২<br>
+			 		<span class="chapterdetails">কিন্তু হুকুশ পাকুশ কেন প্রোগ্রামিং করবে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap3.html">অধ্যায় ৩<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশের প্রথম প্রোগ্রাম</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap4.html">অধ্যায় ৪<br>
+			 		<span class="chapterdetails">আমার নাম ভ্যারিয়েবল</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap5.html">অধ্যায় ৫<br>
+			 		<span class="chapterdetails">যদির কথা নদীর জলে</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap6.html">অধ্যায় ৬<br>
+			 		<span class="chapterdetails">লুপায়িত হুকুশ পাকুশ</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap7.html">অধ্যায় ৭<br>
+			 		<span class="chapterdetails">ফাংশন এবং জাদুর বাক্স</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap8.html">অধ্যায় ৮<br>
+			 		<span class="chapterdetails">অবজেক্ট এবং হাতি</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap9.html">অধ্যায় ৯<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশ এখন প্রোগ্রামিং জানে!</a>
+			 	</div>
+
+			 </div>
+		</div>
+    
+
+		<div id="main">
+      
+      
+			<div id="story">
+			
+
+<div class="btquote">
+বেজায় গরম। গাছতলায় দিব্যি ছায়ার মধ্যে চুপচাপ শুয়ে আছি, তবু ঘেমে অস্থির। ঘাসের উপর রুমালটা ছিল, ঘাম মুছবার জন্য যেই সেটা তুলতে গিয়েছি অমনি রুমালটা বলল &ldquo;ম্যাও!&rdquo; কি আপদ! রুমালটা ম্যাও করে কেন?<br><br>
+
+চেয়ে দেখি রুমাল তো আর রুমাল নেই, দিব্যি মোটা-সোটা লাল টকটকে একটা বেড়াল গোঁফ ফুলিয়ে প্যাট্ প্যাট্ করে আমার দিকে তাকিয়ে আছে!<br><br>
+
+আমি বললাম, &ldquo;কি মুশকিল! ছিল রুমাল, হয়ে গেল একটা বেড়াল।&rdquo;
+<div class="by">সুকুমার রায়</div>
+</div>
+
+<h1>৭ ফাংশন এবং জাদুর বাক্স</h1>
+
+<h2>৭.১ ফাংশন কি?</h2>
+
+<p>ফাংশন একটা মহা মজার জিনিস। ফাংশনের আইডিয়াটা হচ্ছে একটা কালো জাদুর বাক্সের মতো। ধরো আমার একটা সুন্দর জাদুর বাক্স আছে যেটা দিয়ে আমি জাদু দেখাই। আমি যখন সেখানে একটা ব্যাঙকে ভরে ফেলি, তখন একটা রাজপূত্র বের হয়ে আসে। যখন একটা খরগোশ ভরি বাক্সে, তখন একটা প্রজাপতি বের হয়ে আসে। আর একটা পিঁপড়াকে ঢুকায়ে দিলে একটা হাতি বের হয়ে আসে। </p>
+
+<p>জানো এই কনসেপ্টটাই হচ্ছে ফাংশন। ব্যাঙকে ঢুকালে সবসময়ই একটা রাজপূত্র বের হয়ে আসবে, কখনোই একটা  হাতি বের হয়ে আসবে না। কিংবা খরগোশকে ঢুকালেও হাতি বের হয়ে আসবে না। </p>
+
+<p>আমরা ফাংশনের আইডিয়াটা খুব ব্যবহার করি, কারণ ওই কালো জাদুর বাক্সের মতো করে ব্যাপারটা সহজ করে দেয়। আমরা জানি আমাদের একটা জাদুর বাক্স আছে, আর আমরা জানি সে কি কাজ করে - আমাদের ওর কাজটা প্রয়োজন, জাদুর বাক্সটা কিভাবে কাজটা করছে সেটা নিয়ে আমাদের খুব বেশি আগ্রহ নেই যতক্ষণ আমাদের কাজটা ঠিকঠাক শেষ হচ্ছে। </p>
+
+<p>ফাংশনের আকৃতি সবসময় এরকম কিছু হয় y = f(x), যেখানে আগের উদাহরণটাতে f হচ্ছে আমার জাদুর বাক্স, x হচ্ছে আমার ব্যাঙ, y হচ্ছে আমার রাজপূত্র। যদি x পিঁপড়া হয়, তাহলে y হচ্ছে আমার হাতি। এখন ফাংশনটা কি হবে, সেটা হবে তুমি কিভাবে ফাংশনটাকে define করছো সেটা। </p>
+
+<p>ধরো এটা হচ্ছে একটা ফাংশন যেটা সব সময় সংখ্যাটার বর্গ বের করে দেবে</p>
+
+
+
+
+<div><textarea id="701" name="701" >def square(x):
+    return x * x
+
+print square(9)</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode701" class="button"></p>
+<script>
+var editor701 = CodeMirror.fromTextArea(document.getElementById("701"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader701" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output701" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus701" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>এখানে আমার জাদুর বাক্সটা হচ্ছে square আর আমি x কে ঢুকাচ্ছি আর x এর বর্গ বের হয়ে আসছে। </p>
+
+<h2>৭.২ ফাংশনের কাজগুলো</h2>
+
+<h3>৭.২.১ সহজ মানুষ</h3>
+
+<p>ফাংশন আমরা ব্যবহার করি মূলত কোডগুলোকে সহজ করার জন্য। যেমন ধরো কেউ যদি লিখে</p>
+
+
+<div><textarea id="702" name="702" >for x in range(2, 101):
+    if is_prime(x):
+        print x</textarea></div>
+<script>
+var editor702 = CodeMirror.fromTextArea(document.getElementById("702"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+</script>
+
+
+
+
+
+<p>তখন পুরো কোডটা না পড়েও তুমি শুধু এইটুকু পড়েই বুঝতে পারবে যে এখানে দুই থেকে একশ পর্যন্ত সবগুলো মৌলিক সংখ্যাকে প্রিন্ট করা হচ্ছে। কিন্তু যদি আমি লিখতাম</p>
+
+
+<div><textarea id="703" name="703" >for x in range(2, 101):
+    isprime = "yes"
+
+    for i in range(2, x):
+        if x % i == 0:
+            isprime = "no"
+
+    if isprime == "yes":
+        print x</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode703" class="button"></p>
+<script>
+var editor703 = CodeMirror.fromTextArea(document.getElementById("703"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader703" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output703" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus703" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>তাহলে তোমার বুঝতে আরেকটু সময় লাগতো। </p>
+
+<div class="quote">
+To understand recursion, you first need to understand recursion.
+<div class="by">Anonymous</div>
+</div>
+
+<h3>৭.২.২ রিকার্শন</h3>
+
+<p>কিন্তু ফাংশনের আরেকটা খুব আশ্চর্যরকমের ব্যবহার আছে। সেটাকে বলে রিকার্শন। রিকার্শন খুবই অসাধারণ একটা জিনিস। ভয়ংকর রকমের বস একটা জিনিস। একটা কথা ছিলো এরকম - To Iterate is Human, to Recurse, Divine. কারণ রিকার্শন দিয়ে খুব elegant সলুশন লেখা সম্ভব। ভয়ংকর elegant সলুশন লেখা সম্ভব, সেগুলো দেখে তোমার মনে হবে - তুমি কোড দেখছো না, তুমি কবিতা দেখছো। আরো হয়কি, রিকার্শন দেখলে প্রবলেমটার একটা পরিষ্কার রূপ চোখে পড়ে - সেটা খুব সুন্দর একটা ব্যাপার।</p>
+
+<p>তোমাকে elegant কিছু দেখানোর আগে আমি সহজ কিছু দেখাই। রিকার্শন মানে আসলে খুব সহজ - যখন একটা ফাংশন তার নিজেকে call করে, সেটাকে আমরা বলি রিকার্শন। ধরো ফ্যাকটোরিয়ালের সংজ্ঞা হচ্ছে</p>
+
+
+যদি x == 1 হয় 
+  <br>&emsp;  তাহলে factorial(x) = 1
+   <br>&emsp; নাহলে factorial(x) = x * factorial( x - 1 )
+
+<p>আমি আরেকটু ভেঙে দেখাই - </p>
+
+factorial( 5 ) = 5 x 4 x 3 x 2 x 1, তাই না? <br>
+factorial( 4 ) = 4 x 3 x 2 x 1
+
+
+<p>তাহলে আমরা লিখতেই পারি, </p>
+factorial( 5 ) = 5 x factorial( 4 )<br>
+
+<p>তো যদি আমরা কোড লিখি তাহলে দেখো</p>
+
+
+<div><textarea id="704" name="704" >def factorial(x):
+    if x == 1:
+        return 1
+    else:
+        return x * factorial(x - 1)
+
+print factorial(5)</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode704" class="button"></p>
+<script>
+var editor704 = CodeMirror.fromTextArea(document.getElementById("704"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader704" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output704" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus704" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>এই কোডটাতে x এর ফ্যাক্টোরিয়াল বের করার জন্য আবার আমাদের একই ফাংশনটাকে কল করতে হচ্ছে x-1 এর জন্য। তো যখন একটা ফাংশন তার নিজেকে ডাকে তখন আমরা সেটাকে বলি রিকার্শন। </p>
+
+<p>আমি তোমাকে আরেকটা ছোট্ট উদারহণ দেই। তোমার মনে আছে আমরা কিভাবে গ.সা.গু (গরিষ্ঠ সাধারণ গুননীয়ক - greatest common divisor) বের করতাম? </p>
+
+<p>ধরো আমার ৩৩ আর ১২ আছে।</p>
+<p>আমরা এরকম কিছু করতাম ছোটটাকে দিয়ে বড়টা ভাগ করতাম, তারপর ভাগশেষটাকে ছোট বানাতাম আর ছোটটাকে বড় বানাতাম, এভাবে চলতে থাকতাম যতক্ষণ না আমরা শূন্য ভাগশেষ পাচ্ছি, মানে ছোটটা শূণ্য হচ্ছে।</p>
+
+১২ দিয়ে ৩৩ কে ভাগ করলে ভাগশেষ থাকে ৯ <br>
+৯ দিয়ে ১২ কে ভাগ করলে ভাগশেষ থাকে ৩ <br>
+৩ কে দিয়ে ৯ কে ভাগ করলে ভাগশেষ থাকে ০ <br>
+
+<p>তার মানে হচ্ছে ৩ হচ্ছে সবচে' বড় সংখ্যা যারা ১২ আর ৩৩ কে নি:শেষে ভাগ করতে পারে। তো এটা যদি আমরা কোড দিয়ে লিখি তাহলে কোড টা হবে এরকম</p>
+
+
+<div><textarea id="705" name="705" >a = 33
+b = 12
+
+while b != 0:
+    remainder = a % b
+    a = b           # choto ta boro hobe
+    b = remainder   # bakita hobe choto
+
+print a   # gcd</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode705" class="button"></p>
+<script>
+var editor705 = CodeMirror.fromTextArea(document.getElementById("705"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader705" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output705" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus705" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>ঠিক এই জিনিসটা রিকার্শনে দেখতে এরকম লাগবে</p>
+
+
+<div><textarea id="706" name="706" >def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+print gcd(33, 12)</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode706" class="button"></p>
+<script>
+var editor706 = CodeMirror.fromTextArea(document.getElementById("706"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader706" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output706" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus706" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>কিউট না? আমি জানি তুমি হা করে বোঝার চেষ্টা করছো। সেই জন্য আমি তোমাকে বলবো না এটা কিভাবে কাজ করছে!</p>
+
+<div class="quote">
+I say with Didacus Stella, a dwarf standing on the shoulders of a giant may see farther than a giant himself.
+<div class="by">
+Robert Burton
+</div> </div>
+
+<h2>৭.৩ লাইব্রেরি ফাংশন</h2>
+
+<p>মনে আছে, আমি শুরুতে বলছিলাম - যে মানুষের জীবনটা খুব বেশি ছোট্ট বোরিং সব কাজ করার জন্য? প্রোগ্রামাররা একদমই বোরিং কাজ করতে চায় না। তো ওরা করে কি, যখনই দেখে যে অন্য আরেকজন প্রোগ্রামার কিছু একটা লিখে রেখেছে যেটা ওর লাগবে, সে সেটা ব্যবহার করে। এই জিনিসগুলোকে আমরা বলি লাইব্রেরী। প্রোগ্রামাররা সাধারণত খুব দারুণ টাইপের মানুষ হয় - তারা খুব খুশি হয় যখন তাদের কোন কাজ অন্য মানুষদের কাজে লাগে। সেজন্য তুমি দেখবা - মানুষজন খুব দারুণ সব লাইব্রেরী লিখে অনলাইনে ছেড়ে রেখেছে। </p>
+
+<p>আমি তোমাকে অল্প কিছু লাইব্রেরী ফাংশন দেখাবো। এগুলো তোমার কখনো পুরোটা নিজে নিজে লিখতে হবে না। ধরো তুমি একটা ইন্টারেক্টিভ প্রোগ্রাম লিখছো। তুমি ইউজারের কাছ থেকে ওর নাম নিবা, নিয়ে ওকে বলবা যে ওর নামটা খুব সুন্দর। </p>
+
+<p>তো কোডটা হবে এরকম</p>
+
+
+<div><textarea id="707" name="707" >name = raw_input()
+print "you have a beautiful name, " + name</textarea></div>
+<script>
+var editor707 = CodeMirror.fromTextArea(document.getElementById("707"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+</script>
+
+
+
+
+
+<p>এই raw_input() হচ্ছে একটা ফাংশন। সে করে কি ইউজারের কাছ থেকে ইনপুট নেয় আর সেটাকে রিটার্ন করে। </p>
+
+<p>তারপর ধরো আমার দুইটা পূর্ণ সংখ্যা নিতে হবে, নিয়ে যোগ করে বলতে হবে যোগফল কত হলো। সেটা হবে এরকম </p>
+
+
+<div><textarea id="708" name="708" >a = int(raw_input())
+b = int(raw_input())
+
+c = a + b
+print c</textarea></div>
+<script>
+var editor708 = CodeMirror.fromTextArea(document.getElementById("708"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+</script>
+
+
+
+
+
+<p>এখানে int ও একটা ফাংশন, সে করে কি কিছু ক্যারেক্টার নেয়, আর সেটা থেকে সংখ্যা বের করে সেটা রিটার্ন করে। মানে ধরো যদি আমি লিখি "123" এটাকে কিন্তু সে সংখ্যা ভাববে না - ভাববে এটা বোধহয় কারো নাম টাম হবে হয়তো। int করবে কি সেটা থেকে একটা নাম্বার বের করে রিটার্ন করবে। </p>
+
+<p>তারপর ধরো আমরা প্রথমে যেই প্রোগ্রামটা লিখলাম না, একটা ত্রিভূজের আয়তক্ষেত্র বের করার? যদি তুমি ইউজারের কাছ থেকে ইনপুট নিতে চাও সেটা হবে এরকম - </p>
+
+
+<div><textarea id="709" name="709" >base = float(raw_input())
+height = float(raw_input())
+area = 0.5 * base * height
+
+print area</textarea></div>
+<script>
+var editor709 = CodeMirror.fromTextArea(document.getElementById("709"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+</script>
+
+
+
+
+<p>এগুলো সব পাইথনের বিল্ট-ইন লাইব্রেরী ফাংশন। এই ফাংশনগুলোর লিস্ট তুমি পাবা এখানে - <a href="http://docs.python.org/library/functions.html"> <span class="mycode">docs.python.org/library/functions.html</span></a> । আর সবসময় তোমার যখনই কিছু লাগবে গুগল এ সার্চ করো। যেমন এটা লেখার আগে আমি কখনো কোন ইউজারের কাছ থেকে ইনপুট নিয়ে ক্ষেত্রফল বের করিনি। তো সেজন্য এটা লেখার আগে আমি গুগল করেছিলাম এটা লিখে - <a href="http://www.google.com/search?q=converting+raw_input+into+floating+point+number"> <span class="mycode">converting raw_input into floating point number। </span> </a> </p>
+
+<script>
+$(document).ready(function(){
+
+
+$('#runcode701').click(function(){
+  loader = $('#loader701')
+  mystatus = $('#mystatus701')
+  output = $('#output701')
+  codelink = $('#codelink701')
+  beforerun = $('#beforerun701')
+  afterrun = $('#afterrun701')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor701.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode703').click(function(){
+  loader = $('#loader703')
+  mystatus = $('#mystatus703')
+  output = $('#output703')
+  codelink = $('#codelink703')
+  beforerun = $('#beforerun703')
+  afterrun = $('#afterrun703')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor703.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode704').click(function(){
+  loader = $('#loader704')
+  mystatus = $('#mystatus704')
+  output = $('#output704')
+  codelink = $('#codelink704')
+  beforerun = $('#beforerun704')
+  afterrun = $('#afterrun704')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor704.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode705').click(function(){
+  loader = $('#loader705')
+  mystatus = $('#mystatus705')
+  output = $('#output705')
+  codelink = $('#codelink705')
+  beforerun = $('#beforerun705')
+  afterrun = $('#afterrun705')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor705.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode706').click(function(){
+  loader = $('#loader706')
+  mystatus = $('#mystatus706')
+  output = $('#output706')
+  codelink = $('#codelink706')
+  beforerun = $('#beforerun706')
+  afterrun = $('#afterrun706')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor706.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+});
+</script>
+
+
+			</div>
+
+			
+
+			<div id="prev">
+				<a href="chap6.html">আগের অংশ</a>
+			</div>
+
+
+			<div id="next">
+				<a href="chap8.html">পরের অংশ</a>
+			</div>
+
+
+		</div>
+
+    
+    
+    </div>
+    </body>
+
+
+
+<!-- Mirrored from hukush-pakush.com/chap7 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+</html>
+
+

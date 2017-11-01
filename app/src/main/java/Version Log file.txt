@@ -1,0 +1,14 @@
+Project Version 0.1
+Date: 17/5/2017
+1. Bug: Error:Execution failed for task ':app:transformClassesWithJarMergingForDebug'.> com.android.build.api.transform.TransformException: java.util.zip.ZipException: duplicate entry: com/google/android/gms/internal/zzbqx.class
+
+Reason: due to firebase version variability of database
+
+
+
+2. Bug: java.lang.RuntimeException: A TaskDescription's primary color should be opaque
+
+Reason: Color had to be changed!
+
+Project Version 0.2
+Date: 17/5/2017 9:40am

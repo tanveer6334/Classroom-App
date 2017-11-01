@@ -1,0 +1,1404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+    
+<!-- Mirrored from hukush-pakush.com/chap6 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা">
+
+        <link rel="preload" href="fonts/SolaimanLipi.woff" as="font">
+        <link rel="preload" href="fonts/halum.woff" as="font">
+
+        <title>হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা</title>
+
+        <link rel="stylesheet" href="css/pure-min.css">
+        <link rel="stylesheet" href="css/main-min1bce.css?v=6">
+        <link rel="stylesheet" href="css/night-min.css">
+        <link rel="stylesheet" href="css/codemirror-min.css">
+
+        <script src="js/codemirror-min.js"></script>
+        <script src="js/python-min.js"></script>
+        <script src="js/jquery.js"></script>
+
+        <style type="text/css">
+          .CodeMirror {
+            border: 1px solid #eee;
+          }
+          .CodeMirror-scroll {
+            height: auto;
+            overflow-y: hidden;
+            overflow-x: auto;
+            width: 100%;
+          }
+        </style>
+
+
+      
+      
+
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25498154-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>
+
+    </head>
+
+    <body>
+
+    
+    <div id="container">
+    	<div id="side">
+			 <div id="chapterbox">
+			 	<div class="chapter">
+			 		<a href="chap1.html">অধ্যায় ১ <br>
+			 		<span class="chapterdetails">মানুষ প্রোগ্রামিং কেন করে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap2.html">অধ্যায় ২<br>
+			 		<span class="chapterdetails">কিন্তু হুকুশ পাকুশ কেন প্রোগ্রামিং করবে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap3.html">অধ্যায় ৩<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশের প্রথম প্রোগ্রাম</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap4.html">অধ্যায় ৪<br>
+			 		<span class="chapterdetails">আমার নাম ভ্যারিয়েবল</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap5.html">অধ্যায় ৫<br>
+			 		<span class="chapterdetails">যদির কথা নদীর জলে</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap6.html">অধ্যায় ৬<br>
+			 		<span class="chapterdetails">লুপায়িত হুকুশ পাকুশ</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap7.html">অধ্যায় ৭<br>
+			 		<span class="chapterdetails">ফাংশন এবং জাদুর বাক্স</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap8.html">অধ্যায় ৮<br>
+			 		<span class="chapterdetails">অবজেক্ট এবং হাতি</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap9.html">অধ্যায় ৯<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশ এখন প্রোগ্রামিং জানে!</a>
+			 	</div>
+
+			 </div>
+		</div>
+    
+
+		<div id="main">
+      
+      
+			<div id="story">
+			
+
+<div class="btquote">
+ক্যাপ্টেন জোনাথন আঠেরো বছর বয়সে  <br>
+দূর প্রাচ্যের এক দ্বীপে ধরলেন এক পেলিক্যান<br><br>
+
+জোনাথনের সেই পেলিক্যান একদিন সকালে<br>
+ডিম পড়লো একটা ধপধপে সাদা, এবং কি আশ্চর্য  <br>
+তার থেকে বেরিয়ে এলো ঠিক আগেরটার মত এক পেলিক্যান  <br><br>
+
+এই দ্বিতীয় পেলিক্যানটাও যথাসময়ে<br>
+একটা সাদা ডিম পাড়লো, এবং তার থেকে<br>
+অবধারিত ভাবেই এলো আর একটি,
+এবং এইরকম চলতেই থাকলো ...<br><br>
+
+এই ব্যাপারটা চলতে পারে বহুকাল ধরেই<br>
+যদি না কেউ মাঝপথে একটা ওমলেট বানিয়ে নেয়!
+
+<div class="by">
+হ্রোবেয়ার দেনো
+</div>
+</div>
+
+<h1>৬ লুপায়িত হুকুশ পাকুশ</h1>
+
+<p>প্রোগ্রামিং এর সবচে' অসাধারণ ব্যাপার হচ্ছে কি, যদি তোমার একই কাজ বার বার করতে হয়, সেটা তুমি লুপে ফেলে করে ফেলতে পারো। ধরো, হুকুশ পাকুশ একদিন ভুলে গেলো ক্লাসে হোমওয়ার্ক করে নিতে। তখন মিস ওকে বললো, তোমাকে এক হাজার বার লিখে আনতে হবে যে তুমি প্রতিদিন হোমওয়ার্ক করবে। হুকুশ পাকুশ ভাবলো সে  যদি একটা লাইন লিখে সেটাকে বারবার করে কপি করে, তাহলেও গুনে গুনে এক হাজার বার কপি করতে হবে। কত্ত ঝামেলা, তাই না?</p>
+
+<p>এবার চিন্তা করো, এটা আমরা হাতে হাতে কিভাবে করতাম? ধরো আমি ছুটি কাটাতে যাবো সেন্ট মার্টিনসে - আমাকে দশটা জামা নিতে হবে কারণ আমি পুরো মাসটা সেখানে থাকবো। আমি করবো কি একটা একটা করে জামা  নিবো, আর হাতে গুনবো আমি কয়টা জামা নিয়েছি। যখন দেখবো আমার হাতের আঙ্গুল গোনায় দশটা হয়ে গেছে তখন আমি থেমে যাবো। তাই না? লুপের আইডিয়াটা ঠিক তাই।</p>
+
+<h2>৬.১ while loop</h2>
+
+<p>আমরা যখন এটা কোড করবো তখন আমাদের চিন্তাটা থাকবে একই রকম।</p>
+
+
+<div><textarea id="601" name="601" >i = 0
+while i < 1000:
+    print "I promise, I will do homework everyday"
+    i = i + 1</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode601" class="button"></p>
+<script>
+var editor601 = CodeMirror.fromTextArea(document.getElementById("601"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader601" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output601" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus601" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>খেয়াল করো, শুরুতে আমরা i নামের ভ্যারিয়েবলটাকে শূণ্য বানিয়ে নিচ্ছি। তারপর হচ্ছে কি জানো, যতক্ষণ পর্যন্ত i ১০০০ এর ছোট থাকছে ততক্ষণ সে লুপ এর ভিতরে ঢুকছে। আর প্রিন্ট করছে ওই লাইনটা। প্রিন্ট করার পর, সে i কে এক করে বাড়াচ্ছে। মানে যদি i শূণ্য থাকতো তাহলে এক বাড়ানোর পর i এক হয়ে যাবে। তারপর আবার while লুপ চেক করে দেখছে i কি এখনো 1000 এর চে ছোট?  হু ছোট। তারপর আবার সে লুপের ভেতর ঢুকছে। </p>
+
+<p>এটা অনেকটা এরকম - </p>
+<div class="will-fix-this-later">
+i = ০<br>
+<br>
+i(০) কি ১০০০ এর চে' ছোট?<br>
+হু ছোট<br>
+লুপ এর ভিতর ঢুকছি<br>
+লিখছি যে আমি প্রতিদিন হোমওয়ার্ক করবো<br>
+i কে এক বাড়াচ্ছি i এখন ১<br>
+<br>
+i(১) কি ১০০০ এর চে' ছোট?<br>
+হু ছোট<br>
+লুপ এর ভিতর ঢুকছি<br>
+লিখছি যে আমি প্রতিদিন হোমওয়ার্ক করবো<br>
+i কে এক বাড়াচ্ছি i এখন ২<br>
+<br>
+i(২) কি ১০০০ এর চে' ছোট?<br>
+হু ছোট<br>
+লুপ এর ভিতর ঢুকছি<br>
+লিখছি যে আমি প্রতিদিন হোমওয়ার্ক করবো<br>
+i কে এক বাড়াচ্ছি i এখন ৩<br>
+<br>
+(তারপর এই কাজ বারবার হয়ে i একটা সময় ১০০০ হবে)<br>
+<br>
+i(১০০০) কি ১০০০ এর চে' ছোট?<br>
+নাহ ছোট না।<br>
+বেশ তো আমার কাজ শেষ এখন আমি এখন ঘুমাতে যাবো। :)<br><br>
+</div>
+
+<p>তো while এর স্ট্রাকচার হচ্ছে এরকম</p>
+
+<pre>
+while condition:
+    do something
+</pre>
+
+যতক্ষণ কন্ডিশনটা সত্যি থাকবে, ততক্ষণ লুপটা ভিতরের কাজগুলো করতে থাকবে।
+
+<h2>৬.২ for loop </h2>
+
+<p>আমরা উপরে যেই কাজটা করলাম সেটা আরেকভাবে করা যায়। আমি লিখতে পারি</p>
+
+
+<div><textarea id="602" name="602" >for i in range(1000):
+    print "I promise, I will do homework everyday"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode602" class="button"></p>
+<script>
+var editor602 = CodeMirror.fromTextArea(document.getElementById("602"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader602" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output602" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus602" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>এটাও একই কাজ করবে। </p>
+
+<p>ধরো আমাকে ৬ থেকে ১১ এর আগ পর্যন্ত সংখ্যাগুলোর বর্গকে বের করতে হবে তাহলে সেটা হবে এরকম</p>
+
+
+<div><textarea id="603" name="603" >for i in range(6, 11):
+    print i * i</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode603" class="button"></p>
+<script>
+var editor603 = CodeMirror.fromTextArea(document.getElementById("603"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader603" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output603" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus603" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>তারপর ধরো আমাকে ১০০ এর চে' ছোট সবগুলো বেজোড় সংখ্যা বের করতে হবে। তার মানে হচ্ছে ১ লিখে আমি ২ কে বাদ দিবো, তারপর ৩ কি লিখে ৪ কে বাদ দিবো, তাই না?</p>
+
+<p>এটা while loop দিয়ে লিখলে এরকম হবে</p>
+
+
+<div><textarea id="604" name="604" >i = 1
+while i < 100:
+    print i
+    i = i + 2</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode604" class="button"></p>
+<script>
+var editor604 = CodeMirror.fromTextArea(document.getElementById("604"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader604" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output604" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus604" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>আর range দিয়ে লিখলে হবে কি </p>
+
+
+<div><textarea id="605" name="605" >for i in range(1, 100, 2):
+    print i</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode605" class="button"></p>
+<script>
+var editor605 = CodeMirror.fromTextArea(document.getElementById("605"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader605" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output605" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus605" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>এর মানে হচ্ছে আমি ১ থেকে শুরু করবো, চলতে থাকবো যতক্ষণ ১০০ এর চেয়ে বড় না হয়ে যায়, আর প্রতিবার ১ প্রিন্ট করার পর i কে ২ করে বাড়াবো। মানে i যদি প্রথম ধাপে ১ থাকে দ্বিতীয় ধাপে সে ৩ হয়ে যাবে।</p>
+
+<h2>৬.৩ লিস্টের উপর লুপ চালানো</h2>
+
+<p>মনে আছে আমাদের একটা লিস্ট ছিলো ফলের?</p>
+
+
+<div><textarea id="606" name="606" >fruits = ["apple", "orange", "banana", "mango", "cherry"]</textarea></div>
+<script>
+var editor606 = CodeMirror.fromTextArea(document.getElementById("606"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+</script>
+
+
+
+
+<p>এখন যদি কেউ লিস্টটা দিয়ে বলে সবগুলো ফলের নাম প্রিন্ট করো - তাহলে সেটা তিন ভাবে করা যায়</p>
+
+<h3>৬.৩.১ গায়ের জোরে</h3>
+
+
+<div><textarea id="607" name="607" >fruits = ["apple", "orange", "banana", "mango", "cherry"]
+
+print fruits[0]
+print fruits[1]
+print fruits[2]
+print fruits[3]
+print fruits[4]</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode607" class="button"></p>
+<script>
+var editor607 = CodeMirror.fromTextArea(document.getElementById("607"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader607" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output607" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus607" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<h3>৬.৩.২ লুপ চালিয়ে</h3>
+
+
+<div><textarea id="608" name="608" >fruits = ["apple", "orange", "banana", "mango", "cherry"]
+
+for i in range(5):
+    print fruits[i]</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode608" class="button"></p>
+<script>
+var editor608 = CodeMirror.fromTextArea(document.getElementById("608"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader608" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output608" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus608" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>কিংবা</p>
+
+
+<div><textarea id="609" name="609" >fruits = ["apple", "orange", "banana", "mango", "cherry"]
+
+i = 0
+while i < 5:
+    print fruits[i]
+    i = i + 1</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode609" class="button"></p>
+<script>
+var editor609 = CodeMirror.fromTextArea(document.getElementById("609"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader609" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output609" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus609" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<h3>৬.৩.৩ পাইথন স্টাইলে</h3>
+
+
+<div><textarea id="610" name="610" >fruits = ["apple", "orange", "banana", "mango", "cherry"]
+
+for fruit in fruits:
+    print fruit</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode610" class="button"></p>
+<script>
+var editor610 = CodeMirror.fromTextArea(document.getElementById("610"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader610" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output610" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus610" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>এই স্টাইলটা কিউট না? এই স্টাইলটা অনেকটা এরকম - ফলের লিস্টির প্রতিটা ফলের জন্য প্রিন্ট করো ফলের নাম।</p>
+
+<h2>৬.৪ break</h2>
+
+<p>ধরো আমার একটা ফলের দোকান আছে। একজন হঠাৎ করে এসে আমাকে জিজ্ঞেস করলো, 'তোমার কাছে কি জাম্বুরা আছে?'। তো আমার করতে হবে কি, সব তাক ঘুরে এসে খুঁজে দেখতে হবে আসলেই জাম্বুরা আছে কিনা, তাই না? যদি জাম্বুরা পেয়ে যাই আমার আর খোঁজার দরকার নেই। তো আমরা একটা লুপ থেকে বের হয়ে আসতে পারি ব্রেক করে। </p>
+
+<p>যেমন এই কোডটা হবে এরকম</p>
+
+
+<div><textarea id="611" name="611" >fruits = ["apple", "orange", "banana", "jambura",
+          "mango", "cherry"]
+
+found = "no"
+for fruit in fruits:
+    if fruit == "jambura":
+        found = "yes"
+        break
+
+if found == "yes":
+    print "we have jambura!"
+else:
+    print "sorry!"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode611" class="button"></p>
+<script>
+var editor611 = CodeMirror.fromTextArea(document.getElementById("611"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader611" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output611" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus611" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>অবশ্য এই কাজটা আরেকভাবে করা যায় পাইথনে। আমি ওভাবে দেখিয়েছি শুধু তোমাকে ব্রেক করতে শেখানোর জন্য। </p>
+
+
+<div><textarea id="612" name="612" >fruits = ["apple", "orange", "banana", "mango", "cherry"]
+
+if "jambura" in fruits:
+    print "we have jambura"
+if "jambura" not in fruits:
+    print "sorry!"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode612" class="button"></p>
+<script>
+var editor612 = CodeMirror.fromTextArea(document.getElementById("612"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader612" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output612" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus612" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>আবার এভাবেও লেখা যায়, কারণ আমরা ছোটদের ভালোবাসি!</p>
+
+
+<div><textarea id="613" name="613" >fruits = ["apple", "orange", "banana", "mango", "cherry"]
+
+if "jambura" in fruits:
+    print "we have jambura"
+else:
+    print "sorry!"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode613" class="button"></p>
+<script>
+var editor613 = CodeMirror.fromTextArea(document.getElementById("613"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader613" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output613" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus613" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<h2>৬.৫ continue</h2>
+
+<p>মনে আছে হুকুশ পাকুশ, আমাদের আগে একটা প্রবলেম ছিলো যেখানে এক থেকে একশ পর্যন্ত পর্যন্ত সবগুলো বেজোড় সংখ্যাকে প্রিন্ট করতে হবে? ধরো আমরা একটু পাল্টাই প্রবলেমটা - সবগুলো এক থেকে একশ পর্যন্ত বেজোড় সংখ্যার যোগফল প্রিন্ট করতে হবে। তখন আমরা যখনই একটা জোড় সংখ্যা পাবো - আমরা সেটাকে পাত্তাই দিবো না - আমরা continue করবো পরের সংখ্যাটার জন্য। </p>
+
+<p>তো সেটা হবে এরকম</p>
+
+
+<div><textarea id="614" name="614" >sum = 0
+for i in range(1, 100):
+    if i % 2 == 0:
+        continue
+    sum = sum + i
+
+print sum</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode614" class="button"></p>
+<script>
+var editor614 = CodeMirror.fromTextArea(document.getElementById("614"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader614" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output614" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus614" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>এখানে i % 2 মানে হচ্ছে i কে যদি 2 দিয়ে ভাগ করি ভাগশেষ কত থাকবে সেটা। যেমন 3%2==1, 4%2==0  এবং 5%3==2 </p>
+
+<script>
+$(document).ready(function(){
+
+
+$('#runcode601').click(function(){
+  loader = $('#loader601')
+  mystatus = $('#mystatus601')
+  output = $('#output601')
+  codelink = $('#codelink601')
+  beforerun = $('#beforerun601')
+  afterrun = $('#afterrun601')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor601.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode602').click(function(){
+  loader = $('#loader602')
+  mystatus = $('#mystatus602')
+  output = $('#output602')
+  codelink = $('#codelink602')
+  beforerun = $('#beforerun602')
+  afterrun = $('#afterrun602')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor602.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode603').click(function(){
+  loader = $('#loader603')
+  mystatus = $('#mystatus603')
+  output = $('#output603')
+  codelink = $('#codelink603')
+  beforerun = $('#beforerun603')
+  afterrun = $('#afterrun603')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor603.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode604').click(function(){
+  loader = $('#loader604')
+  mystatus = $('#mystatus604')
+  output = $('#output604')
+  codelink = $('#codelink604')
+  beforerun = $('#beforerun604')
+  afterrun = $('#afterrun604')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor604.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode605').click(function(){
+  loader = $('#loader605')
+  mystatus = $('#mystatus605')
+  output = $('#output605')
+  codelink = $('#codelink605')
+  beforerun = $('#beforerun605')
+  afterrun = $('#afterrun605')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor605.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode607').click(function(){
+  loader = $('#loader607')
+  mystatus = $('#mystatus607')
+  output = $('#output607')
+  codelink = $('#codelink607')
+  beforerun = $('#beforerun607')
+  afterrun = $('#afterrun607')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor607.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode608').click(function(){
+  loader = $('#loader608')
+  mystatus = $('#mystatus608')
+  output = $('#output608')
+  codelink = $('#codelink608')
+  beforerun = $('#beforerun608')
+  afterrun = $('#afterrun608')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor608.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode609').click(function(){
+  loader = $('#loader609')
+  mystatus = $('#mystatus609')
+  output = $('#output609')
+  codelink = $('#codelink609')
+  beforerun = $('#beforerun609')
+  afterrun = $('#afterrun609')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor609.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode610').click(function(){
+  loader = $('#loader610')
+  mystatus = $('#mystatus610')
+  output = $('#output610')
+  codelink = $('#codelink610')
+  beforerun = $('#beforerun610')
+  afterrun = $('#afterrun610')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor610.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode611').click(function(){
+  loader = $('#loader611')
+  mystatus = $('#mystatus611')
+  output = $('#output611')
+  codelink = $('#codelink611')
+  beforerun = $('#beforerun611')
+  afterrun = $('#afterrun611')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor611.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode612').click(function(){
+  loader = $('#loader612')
+  mystatus = $('#mystatus612')
+  output = $('#output612')
+  codelink = $('#codelink612')
+  beforerun = $('#beforerun612')
+  afterrun = $('#afterrun612')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor612.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode613').click(function(){
+  loader = $('#loader613')
+  mystatus = $('#mystatus613')
+  output = $('#output613')
+  codelink = $('#codelink613')
+  beforerun = $('#beforerun613')
+  afterrun = $('#afterrun613')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor613.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode614').click(function(){
+  loader = $('#loader614')
+  mystatus = $('#mystatus614')
+  output = $('#output614')
+  codelink = $('#codelink614')
+  beforerun = $('#beforerun614')
+  afterrun = $('#afterrun614')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor614.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+});
+</script>
+
+
+
+
+			</div>
+
+			
+
+			<div id="prev">
+				<a href="chap5.html">আগের অংশ</a>
+			</div>
+
+
+			<div id="next">
+				<a href="chap7.html">পরের অংশ</a>
+			</div>
+
+
+		</div>
+
+    
+    
+    </div>
+    </body>
+
+
+
+<!-- Mirrored from hukush-pakush.com/chap6 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+</html>
+
+

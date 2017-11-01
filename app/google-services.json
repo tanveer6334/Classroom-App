@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "895950094068",
+    "firebase_url": "https://classroom-cba28.firebaseio.com",
+    "project_id": "classroom-cba28",
+    "storage_bucket": "classroom-cba28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895950094068:android:7f73e1e6da9a68bf",
+        "android_client_info": {
+          "package_name": "com.diu.tanveer.classroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895950094068-bkqka220fjajg4s9engvbkgpbmrsua32.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.diu.tanveer.classroom",
+            "certificate_hash": "2863ac1fb0b12270e4203cec289f3fcd455fe4fd"
+          }
+        },
+        {
+          "client_id": "895950094068-on4ubk2u0kpc9qf0qtomt1khdnbb34sn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBABotm8Nl7tpzLdW1hMeOjZa5me8YhA7g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895950094068-on4ubk2u0kpc9qf0qtomt1khdnbb34sn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

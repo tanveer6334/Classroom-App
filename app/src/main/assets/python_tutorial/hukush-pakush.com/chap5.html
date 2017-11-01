@@ -1,0 +1,882 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+    
+<!-- Mirrored from hukush-pakush.com/chap5 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা">
+
+        <link rel="preload" href="fonts/SolaimanLipi.woff" as="font">
+        <link rel="preload" href="fonts/halum.woff" as="font">
+
+        <title>হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা</title>
+
+        <link rel="stylesheet" href="css/pure-min.css">
+        <link rel="stylesheet" href="css/main-min1bce.css?v=6">
+        <link rel="stylesheet" href="css/night-min.css">
+        <link rel="stylesheet" href="css/codemirror-min.css">
+
+        <script src="js/codemirror-min.js"></script>
+        <script src="js/python-min.js"></script>
+        <script src="js/jquery.js"></script>
+
+        <style type="text/css">
+          .CodeMirror {
+            border: 1px solid #eee;
+          }
+          .CodeMirror-scroll {
+            height: auto;
+            overflow-y: hidden;
+            overflow-x: auto;
+            width: 100%;
+          }
+        </style>
+
+
+      
+      
+
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25498154-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>
+
+    </head>
+
+    <body>
+
+    
+    <div id="container">
+    	<div id="side">
+			 <div id="chapterbox">
+			 	<div class="chapter">
+			 		<a href="chap1.html">অধ্যায় ১ <br>
+			 		<span class="chapterdetails">মানুষ প্রোগ্রামিং কেন করে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap2.html">অধ্যায় ২<br>
+			 		<span class="chapterdetails">কিন্তু হুকুশ পাকুশ কেন প্রোগ্রামিং করবে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap3.html">অধ্যায় ৩<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশের প্রথম প্রোগ্রাম</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap4.html">অধ্যায় ৪<br>
+			 		<span class="chapterdetails">আমার নাম ভ্যারিয়েবল</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap5.html">অধ্যায় ৫<br>
+			 		<span class="chapterdetails">যদির কথা নদীর জলে</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap6.html">অধ্যায় ৬<br>
+			 		<span class="chapterdetails">লুপায়িত হুকুশ পাকুশ</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap7.html">অধ্যায় ৭<br>
+			 		<span class="chapterdetails">ফাংশন এবং জাদুর বাক্স</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap8.html">অধ্যায় ৮<br>
+			 		<span class="chapterdetails">অবজেক্ট এবং হাতি</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap9.html">অধ্যায় ৯<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশ এখন প্রোগ্রামিং জানে!</a>
+			 	</div>
+
+			 </div>
+		</div>
+    
+
+		<div id="main">
+      
+      
+			<div id="story">
+			
+
+
+<div class="btquote">
+যদি &nbsp;  কেউ কথা না কয়,  &nbsp;  ওরে ওরে ও অভাগা, <br>
+যদি &nbsp; সবাই থাকে মুখ ফিরায়ে &nbsp;    সবাই করে ভয়-- <br>
+ &nbsp;  &nbsp;  &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp; তবে  &nbsp;  পরান খুলে<br>
+ও তুই  &nbsp;   মুখ ফুটে তোর মনের কথা   &nbsp;  একলা বলো রে ॥
+<div class="by"> রবীন্দ্রনাথ ঠাকুর </div>
+</div>
+
+<h1>৫ যদির কথা নদীর জলে</h1>
+
+<p> একদিন খুব ভোরে লাল সূর্যটা জানালা দিয়ে উঁকি মেরে হুকুশ পাকুশের ঘুম ভেঙ্গে দিলো। তারপর হুকুশ পাকুশ খুব কষ্ট করে বাম চোখটুকু ইকটু খুললো আর ভাবলো "আজকে কি বার?"। তারপর ভাবলো, যদি আজকে শুক্রবার হয়, তাহলে আমি আরিকটু ঘুমাবো। নাহলে স্কুলে যেতে হবে।</p>
+
+<p>আমরা যখন কম্পিউটারকে বলি কিসের পর কি করতে হবে, তখন মাঝে মাঝে ওকে শিখিয়ে দিতে হয়, কি হলে কি করতে হবে। এই জিনিসটাকে ইংরেজীতে বলে কন্ট্রোল ফ্লো। সহজ ভাষায়, ওকে একটা ছোট্ট বাচ্চার মতো করে বুঝিয়ে বলতে হয় - যদি (এটা হয়) তাহলে তুমি (এটা করবা), অথবা যদি (ওটা হয়) তাহলে তুমি (ওটা করবা), নাইলে তুমি (ওইটা করবা)। বুঝছো হুকুশ পাকুশ?
+</p>
+
+<p>যেমন উপরের চিন্তাটুকুর প্রোগ্রামটা হবে এরকম</p>
+
+
+<div><textarea id="501" name="501" >today = "friday"
+
+if today == "friday":
+    print "I am going to be a sleepy baby today"
+else:
+    print "oh no! school! exam! no oh!"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode501" class="button"></p>
+<script>
+var editor501 = CodeMirror.fromTextArea(document.getElementById("501"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader501" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output501" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus501" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>তুমি যদি today = "tuesday" করে দাও, তাহলে তোমাকে প্রোগ্রামটা বলবে স্কুলে যেতে! খেয়াল করো হুকুশ পাকুশ, এখানে কিন্তু দুইটা সমান সমান চিহ্ণ। বাংলায় যেমন আমরা বলি - এটা সমান সমান ওটা - ঠিক সেরকম। একটা সমান চিহ্ণ দিয়ে আমরা ভ্যারিয়েবল এর মান বসাই। কিন্তু যখনই না কোন কিছু সমান সমান কিনা পরীক্ষা করা লাগে - তখন আমরা দুইটা সমান চিহ্ণ লিখি। </p>
+
+<p>তারপর ধরো সোমবার আমাকে আমার ছোট ভাইটাকে নিয়ে দাঁতের ডাক্তারের কাছে যেতে হবে। সেক্ষেত্রে ব্যাপারটা হবে ঠিক এরকম।</p>
+
+
+
+<div><textarea id="502" name="502" >today = "friday"
+
+if today == "friday":
+    print "I am going to be a sleepy baby today"
+elif today == "monday":
+    print "take your brother to dentist"
+else:
+    print "oh no! school! exam! no oh!"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode502" class="button"></p>
+<script>
+var editor502 = CodeMirror.fromTextArea(document.getElementById("502"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader502" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output502" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus502" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>এখানে elif মানে হচ্ছে else if । এভাবে লেখা হয়, কারণ প্রোগ্রামাররা ভীষণ অলস। পুরোটা লিখতে গেলে তাদের হাত ব্যাথা করে। </p>
+
+<h2>৫.১ বুলিয়ান অপারেটর</h2>
+
+<p>হুকুশ পাকুশের একদিন খুব শখ হলো  একটা ছোট্ট নরম সাদা বাবু খরগোশ কেনার। তারপর ওর বাবা ওকে বললো, "তুমি যদি (লক্ষ্ণী হয়ে থাকো) <b>এবং</b> যদি (মায়ের কথা শুনো) তাহলে তোমাকে (খরগোশ কিনে দিবো)"। তারপর হুকুশ পাকুশ মুখটা ফুলিয়ে বললো, "কিন্তু লক্ষ্ণী হয়ে থাকা খুব ক-ঠি-ন!"। তখন ওর বাবা ওকে বললো, "তুমি যদি (সব হোমওয়ার্ক) করে ফেলো <b>অথবা</b> যদি (অঙ্ক পরীক্ষার সব পড়া পড়ে ফেলো) তাহলে তোমাকে (খরগোশ কিনে দিবো)"।</p>
+
+<p>দেখো, এই ক্ষেত্রে শুধু যদি দিয়ে সবকিছু বলা যাচ্ছে না। আমাদের "অথবা" আর "এবং" ব্যবহার করতে হচ্ছে। এই শব্দগুলো বলা হয় বুলিয়ান অপারেটার। বুলিয়ান নামটা এসেছে জর্জ বুল নামের একটা গণিতবিদের কাছ থেকে। জর্জ বুল বলতো কি, <i>"অঙ্ক কেন এত কঠিন হবে? অঙ্কের উত্তর হবে শুধু হ্যাঁ আর না দিয়ে। তাহলে অঙ্ক কত্ত সহজ হয়ে যায়!" </i>তো জর্জ বুল বসে বসে একটা অঙ্ক শাস্ত্র লিখে ফেললো, যেখানে শুধু হ্যাঁ আর না দিয়ে অনেক অঙ্ক করে ফেলা যায়। </p>
+
+<ul>
+<li> সমান সমান অপারেটর (==)
+<li> এবং (and)
+<li> অথবা (or)
+</ul>
+
+<p>তাহলে যদি কথাটা এমন হয় যে আজকে সোমবার কিংবা রবিবার হয় তাহলে স্কুলে খরগোশটাকে নিয়ে যাবো তাহলে সেটা হবে এরকম</p>
+
+
+<div><textarea id="504" name="504" >today = "friday"
+
+if today == "monday" or today == "sunday":
+    print "take the bunny to school"
+else:
+    print "do not take the bunny!"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode504" class="button"></p>
+<script>
+var editor504 = CodeMirror.fromTextArea(document.getElementById("504"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader504" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output504" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus504" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>খেয়াল করো, এখানে if লেখার পর এর পরের লাইন লেখার সময় কিন্তু একটা ট্যাব (tab) দিতে হবে। তাহলে কম্পাইলার বুঝবে কোন অংশটার ভিতরে কোন অংশটা। যেমন এখানে প্রথম if টার ভিতরে খরগোশকে স্কুলে নেয়ার অংশটা, দ্বিতীয় if টার ভিতরে না নেয়ার অংশটা। </p>
+
+<h2>৫.২ কম্পারিজন অপারেটর</h2>
+
+<p>সবসময় আমাদের তুলনা গুলো সমান সমান কিংবা - এবং, অথবা দিয়ে হয় না। যেমন ধরো, আমার কাছে টাকা আছে কিনা, এটার তুলনা এভাবেও করা যেতো, আমার কাছে তিনশর বেশি টাকা আছে? তাহলে আমি সিনেমা দেখতে যাবো নাইলে যাবো না। সেক্ষেত্রে আমরা আরো কিছু অপারেটর ব্যবহার করি। </p>
+
+<ul>
+<li> >  greater than
+<li> >= greater or equal
+<li> <  less than
+<li> <= less or equal
+</ul>
+
+<p>তিনশর বেশি থাকলে সিনেমা যদি দেখতে যাই তাহলে কোডটা হবে এরকম </p>
+
+
+<div><textarea id="506" name="506" >today = "monday"
+money = 1000
+
+if today == "monday" and money > 300:
+    print "going to cinema!"
+else:
+    print "not today"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode506" class="button"></p>
+<script>
+var editor506 = CodeMirror.fromTextArea(document.getElementById("506"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader506" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output506" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus506" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>মাঝে মাঝে আমাদের অনেক জটিল ধরণের চিন্তা করতে হয়। ধরো রবি আর কবি দুই বন্ধু যারা সিনেমা দেখতে যাবে - তাহলে আজকে অবশ্যই সোমবার হতে হবে আর দুইজনের কাছেই আলাদা আলাদা করে ৩০০ এর বেশি টাকা থাকতে হবে। তাহলে কোড টা হবে এরকম</p>
+
+
+<div><textarea id="507" name="507" >today = "monday"
+robi = 1000
+kobi = 299
+
+if today == "monday" and robi > 300 and kobi > 300:
+    print "going to cinema!"
+else:
+    print "not today"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode507" class="button"></p>
+<script>
+var editor507 = CodeMirror.fromTextArea(document.getElementById("507"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader507" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output507" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus507" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>এখন এমনও হতে পারে রবির কাছে যদি ছয়শ টাকার বেশি থাকে তাহলে সে কবির টিকেটের টাকা দিয়ে দেবে। তখন আমাদের লজিকটা হচ্ছে </p>
+
+যদি( আজকে সোমবার হয় এবং
+ <br>&emsp; 	(রবির কাছে ছয়শ টাকার বেশি থাকে
+ <br>&emsp; 	&emsp; 	অথবা ( রবি আর কবি দুই জনের কাছে তিনশর বেশি টাকা আছে ))
+ <br>&emsp; 	&emsp;  &emsp; 		তাহলে সিনেমা দেখতে যাবে
+ <br>
+ <br>
+
+
+<div><textarea id="508" name="508" >today = "monday"
+robi = 1000
+kobi = 299
+
+if today == "monday" and (robi > 600 or (robi > 300 and kobi > 300)):
+    print "going to cinema!"
+else:
+    print "not today"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode508" class="button"></p>
+<script>
+var editor508 = CodeMirror.fromTextArea(document.getElementById("508"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader508" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output508" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus508" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>খেয়াল করো এখানে ব্র্যাকেটটা কিন্তু খুব গুরুত্বপূর্ণ। তুমি যদি ব্র্যাকেটগুলো সরিয়ে ফেলো তাহলে কম্পাইলার ঠিকমতো বুঝতে পারবে না, কোনটা আর কোনটার মধ্যে কিভাবে তুলনা করতে হবে। </p>
+
+<p> যখন লাইনগুলো বেশি বড় হয়ে যায় পাইথনে আমরা একটা ব্যাকস্ল্যাশ (\) লিখে আবার পরের লাইন থেকে শুরু করি। যেমন উপরের কোডটা হবে এমন। </p>
+
+
+<div><textarea id="509" name="509" >today = "monday"
+robi = 1000
+kobi = 299
+
+if today == "monday" and \
+        (robi > 600 or (robi > 300 and kobi > 300)):
+    print "going to cinema!"
+else:
+    print "not today"</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode509" class="button"></p>
+<script>
+var editor509 = CodeMirror.fromTextArea(document.getElementById("509"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader509" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output509" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus509" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<script>
+$(document).ready(function(){
+
+
+$('#runcode501').click(function(){
+  loader = $('#loader501')
+  mystatus = $('#mystatus501')
+  output = $('#output501')
+  codelink = $('#codelink501')
+  beforerun = $('#beforerun501')
+  afterrun = $('#afterrun501')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor501.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode502').click(function(){
+  loader = $('#loader502')
+  mystatus = $('#mystatus502')
+  output = $('#output502')
+  codelink = $('#codelink502')
+  beforerun = $('#beforerun502')
+  afterrun = $('#afterrun502')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor502.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode504').click(function(){
+  loader = $('#loader504')
+  mystatus = $('#mystatus504')
+  output = $('#output504')
+  codelink = $('#codelink504')
+  beforerun = $('#beforerun504')
+  afterrun = $('#afterrun504')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor504.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode505').click(function(){
+  loader = $('#loader505')
+  mystatus = $('#mystatus505')
+  output = $('#output505')
+  codelink = $('#codelink505')
+  beforerun = $('#beforerun505')
+  afterrun = $('#afterrun505')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor505.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode506').click(function(){
+  loader = $('#loader506')
+  mystatus = $('#mystatus506')
+  output = $('#output506')
+  codelink = $('#codelink506')
+  beforerun = $('#beforerun506')
+  afterrun = $('#afterrun506')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor506.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode507').click(function(){
+  loader = $('#loader507')
+  mystatus = $('#mystatus507')
+  output = $('#output507')
+  codelink = $('#codelink507')
+  beforerun = $('#beforerun507')
+  afterrun = $('#afterrun507')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor507.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode508').click(function(){
+  loader = $('#loader508')
+  mystatus = $('#mystatus508')
+  output = $('#output508')
+  codelink = $('#codelink508')
+  beforerun = $('#beforerun508')
+  afterrun = $('#afterrun508')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor508.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode509').click(function(){
+  loader = $('#loader509')
+  mystatus = $('#mystatus509')
+  output = $('#output509')
+  codelink = $('#codelink509')
+  beforerun = $('#beforerun509')
+  afterrun = $('#afterrun509')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor509.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+});
+</script>
+
+
+			</div>
+
+			
+
+			<div id="prev">
+				<a href="chap4.html">আগের অংশ</a>
+			</div>
+
+
+			<div id="next">
+				<a href="chap6.html">পরের অংশ</a>
+			</div>
+
+
+		</div>
+
+    
+    
+    </div>
+    </body>
+
+
+
+<!-- Mirrored from hukush-pakush.com/chap5 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+</html>
+
+

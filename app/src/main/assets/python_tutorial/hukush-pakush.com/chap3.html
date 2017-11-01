@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+    
+<!-- Mirrored from hukush-pakush.com/chap3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা">
+
+        <link rel="preload" href="fonts/SolaimanLipi.woff" as="font">
+        <link rel="preload" href="fonts/halum.woff" as="font">
+
+        <title>হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা</title>
+
+        <link rel="stylesheet" href="css/pure-min.css">
+        <link rel="stylesheet" href="css/main-min1bce.css?v=6">
+        <link rel="stylesheet" href="css/night-min.css">
+        <link rel="stylesheet" href="css/codemirror-min.css">
+
+        <script src="js/codemirror-min.js"></script>
+        <script src="js/python-min.js"></script>
+        <script src="js/jquery.js"></script>
+
+        <style type="text/css">
+          .CodeMirror {
+            border: 1px solid #eee;
+          }
+          .CodeMirror-scroll {
+            height: auto;
+            overflow-y: hidden;
+            overflow-x: auto;
+            width: 100%;
+          }
+        </style>
+
+
+      
+      
+
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25498154-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>
+
+    </head>
+
+    <body>
+
+    
+    <div id="container">
+    	<div id="side">
+			 <div id="chapterbox">
+			 	<div class="chapter">
+			 		<a href="chap1.html">অধ্যায় ১ <br>
+			 		<span class="chapterdetails">মানুষ প্রোগ্রামিং কেন করে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap2.html">অধ্যায় ২<br>
+			 		<span class="chapterdetails">কিন্তু হুকুশ পাকুশ কেন প্রোগ্রামিং করবে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap3.html">অধ্যায় ৩<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশের প্রথম প্রোগ্রাম</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap4.html">অধ্যায় ৪<br>
+			 		<span class="chapterdetails">আমার নাম ভ্যারিয়েবল</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap5.html">অধ্যায় ৫<br>
+			 		<span class="chapterdetails">যদির কথা নদীর জলে</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap6.html">অধ্যায় ৬<br>
+			 		<span class="chapterdetails">লুপায়িত হুকুশ পাকুশ</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap7.html">অধ্যায় ৭<br>
+			 		<span class="chapterdetails">ফাংশন এবং জাদুর বাক্স</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap8.html">অধ্যায় ৮<br>
+			 		<span class="chapterdetails">অবজেক্ট এবং হাতি</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap9.html">অধ্যায় ৯<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশ এখন প্রোগ্রামিং জানে!</a>
+			 	</div>
+
+			 </div>
+		</div>
+    
+
+		<div id="main">
+      
+      
+			<div id="story">
+			
+
+<div class="btquote">
+একটা হাজার মাইলের যাত্রা শুরু হয় কিন্তু <br>একটা ছোট্ট পায়ের ছাপ থেকে।
+<div class="by">লাও যু</div>
+</div>
+
+<h1>৩ হুকুশ পাকুশের প্রথম প্রোগ্রাম</h1>
+
+<h2>৩.১ হ্যালো পৃথিবী! </h2>
+
+<p>এই ছোট্ট বাক্সটা দেখতে পাচ্ছো হুকুশ পাকুশ? এই বাক্সটাতে লিখো <span class="mycode">print "hello world!"</span></p>
+
+
+<div><textarea id="301" name="301" ></textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode301" class="button"></p>
+<script>
+var editor301 = CodeMirror.fromTextArea(document.getElementById("301"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader301" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output301" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus301" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<div id="beforerun301"><p>লিখেছো?
+এবার কম্পাইল বাটনটা চাপো! </p> </div>
+
+<p>এটা ছিলো তোমার লেখা প্রথম প্রোগ্রাম! তুমি এখন থেকে প্রোগ্রামার হুকুশ পাকুশ! </p>
+
+<p>আমরা এই প্রোগ্রামটাতে কম্পিউটারকে কি করতে বলেছিলাম জানো? আমরা কম্পিউটারটাকে বললাম, স্ক্রিনে দেখাতে <span class="mycode">"hello world!"</span>। তখন আমাদের কথা মতো একটা ছোট্ট নতুন প্রোগ্রামের জন্ম হলো। আর সেই ছোট্ট প্রোগ্রামটা চোখ খুলে বললো, &ldquo;হ্যালো পৃথিবী!&rdquo;।</p>
+
+<p> কি মজা না বলো? তুমি যা করতে বলছো এখন কম্পিউটারটা তাই করছে! </p>
+
+<p>এবার একটা কাজ করো। <span class="mycode">"hello world"</span> এর জায়গায় অন্য নতুন করে লিখো <span class="mycode">"hello hukush-pakush!"</span> । তারপর চলো তো দেখি কি হয়?</p>
+
+<p>এবার আমি তোমাকে বলি এখানে আসলে কি হচ্ছে। কম্পিউটারটা আসলে পুরাই একটা যন্ত্র। ওর কোন অনুভূতি নেই। ও কিচ্ছু বুঝে না। ও শুধু বুঝতে পারে যে কারেন্ট আছে আর কারেন্ট নেই । আর সেজন্য সে সবকিছু বুঝে নেয় শূণ্য আর এক দিয়ে। কম্পিউটারের কাছে শূণ্যতার মানে হচ্ছে কারেন্ট নেই, এক মানে হচ্ছে কারেন্ট আছে। তুমি তোমার কম্পিউটারকে যাই বলো না কেন, সে ঠিকই ওর মত করে শূণ্য এক দিয়ে কিছু একটা বুঝে নেবে। ধরো তুমি বললা &ldquo;আমি তোমাকে ভালোবাসি&rdquo;, কম্পিউটার বুঝবে &ldquo;শূণ্য শূণ্য শূন্য এক এক শূণ্য এক শূণ্য এক এক শূণ্য শূণ্য...&rdquo;। তারপর বোকা হয়ে বসে থাকবে চুপ করে কারণ তুমি তো ওকে কিছু করতে বলোনি! </p>
+
+<p>কম্পিউটারকে আমাদের কথাগুলো বুঝিয়ে দেয়ার জন্য একটা অনুবাদক প্রোগ্রাম লাগে। সে করে কি আমাদের কথাগুলো শোনে তারপর শূণ্য আর এক এ অনুবাদ করে দেয় কম্পিউটারকে। এ ধরণের প্রোগ্রামগুলোকে বলে কম্পাইলার।</p>
+
+<p>তো তুমি যখন লিখলে <span class="mycode">print "hello world!"</span> তখন কম্পাইলার প্রোগ্রামটা করলো কি - প্রথমে তোমার কোডটাকে পড়লো, তারপর কম্পিউটারকে অনুবাদ করে বললো &ldquo;কম্পিউটারজী, আপনি আপনার প্রখর বুদ্ধি দিয়ে স্ক্রিনে এক্ষুনি  <span class="mycode">hello world!</span> প্রিন্ট করুন&rdquo;। তারপর কম্পিউটার সেটা বুঝে নিয়ে তাড়াহুড়া করে স্ক্রিনে দেখালো <span class="mycode">hello world!</span> </p>
+
+<p>মানুষের যেকরম অনেকগুলো ভাষা, সেরকম কম্পিউটারেরও অনেকগুলো ভাষা। আমি তোমাকে যে ভাষাটা শেখাবো সেটার নাম হচ্ছে পাইথন। </p>
+
+<img class="midimage" src="img/python.png">
+
+<h2>৩.২ কাছে আসো, অঙ্ক করি! </h2>
+
+<p> মনে আছে হুকুশ পাকুশ, চার্লস ব্যাবেজ প্রথম কম্পিউটারটা বানাতে চাচ্ছিলো হিসেব নিকেশ করার জন্য? আসো আমরা দেখি কম্পিউটার দুইয়ে দুইয়ে চার করতে পারে কিনা।</p>
+
+
+<div><textarea id="302" name="302" >print 2 + 2
+print 4 * 8
+print 9 / 3
+print (2 * 3) + ((3 * 3) + (9 * 9)) * 5</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode302" class="button"></p>
+<script>
+var editor302 = CodeMirror.fromTextArea(document.getElementById("302"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader302" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output302" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus302" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<script>
+$(document).ready(function(){
+
+
+$('#runcode301').click(function(){
+  loader = $('#loader301')
+  mystatus = $('#mystatus301')
+  output = $('#output301')
+  codelink = $('#codelink301')
+  beforerun = $('#beforerun301')
+  afterrun = $('#afterrun301')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor301.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode302').click(function(){
+  loader = $('#loader302')
+  mystatus = $('#mystatus302')
+  output = $('#output302')
+  codelink = $('#codelink302')
+  beforerun = $('#beforerun302')
+  afterrun = $('#afterrun302')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor302.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+});
+</script>
+
+
+			</div>
+
+			
+
+			<div id="prev">
+				<a href="chap2.html">আগের অংশ</a>
+			</div>
+
+
+			<div id="next">
+				<a href="chap4.html">পরের অংশ</a>
+			</div>
+
+
+		</div>
+
+    
+    
+    </div>
+    </body>
+
+
+
+<!-- Mirrored from hukush-pakush.com/chap3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+</html>
+
+

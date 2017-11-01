@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+    
+<!-- Mirrored from hukush-pakush.com/chap8 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা">
+
+        <link rel="preload" href="fonts/SolaimanLipi.woff" as="font">
+        <link rel="preload" href="fonts/halum.woff" as="font">
+
+        <title>হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা</title>
+
+        <link rel="stylesheet" href="css/pure-min.css">
+        <link rel="stylesheet" href="css/main-min1bce.css?v=6">
+        <link rel="stylesheet" href="css/night-min.css">
+        <link rel="stylesheet" href="css/codemirror-min.css">
+
+        <script src="js/codemirror-min.js"></script>
+        <script src="js/python-min.js"></script>
+        <script src="js/jquery.js"></script>
+
+        <style type="text/css">
+          .CodeMirror {
+            border: 1px solid #eee;
+          }
+          .CodeMirror-scroll {
+            height: auto;
+            overflow-y: hidden;
+            overflow-x: auto;
+            width: 100%;
+          }
+        </style>
+
+
+      
+      
+
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25498154-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>
+
+    </head>
+
+    <body>
+
+    
+    <div id="container">
+    	<div id="side">
+			 <div id="chapterbox">
+			 	<div class="chapter">
+			 		<a href="chap1.html">অধ্যায় ১ <br>
+			 		<span class="chapterdetails">মানুষ প্রোগ্রামিং কেন করে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap2.html">অধ্যায় ২<br>
+			 		<span class="chapterdetails">কিন্তু হুকুশ পাকুশ কেন প্রোগ্রামিং করবে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap3.html">অধ্যায় ৩<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশের প্রথম প্রোগ্রাম</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap4.html">অধ্যায় ৪<br>
+			 		<span class="chapterdetails">আমার নাম ভ্যারিয়েবল</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap5.html">অধ্যায় ৫<br>
+			 		<span class="chapterdetails">যদির কথা নদীর জলে</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap6.html">অধ্যায় ৬<br>
+			 		<span class="chapterdetails">লুপায়িত হুকুশ পাকুশ</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap7.html">অধ্যায় ৭<br>
+			 		<span class="chapterdetails">ফাংশন এবং জাদুর বাক্স</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap8.html">অধ্যায় ৮<br>
+			 		<span class="chapterdetails">অবজেক্ট এবং হাতি</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap9.html">অধ্যায় ৯<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশ এখন প্রোগ্রামিং জানে!</a>
+			 	</div>
+
+			 </div>
+		</div>
+    
+
+		<div id="main">
+      
+      
+			<div id="story">
+			
+
+<div class="btquote">
+তালগাছ                   এক পায়ে দাঁড়িয়ে <br>
+                   সব গাছ ছাড়িয়ে<br>
+                             উঁকি মারে আকাশে।<br><br>
+মনে সাধ,                 কালো মেঘ ফুঁড়ে যায়<br>
+                   একেবারে উড়ে যায়;<br><br>
+                             কোথা পাবে পাখা সে?
+<div class="by">রবীন্দ্রনাথ ঠাকুর</div>
+</div>
+
+<h1>৮ অবজেক্ট এবং হাতি </h1>
+
+ হুকুশ পাকুশ, তুমি কি তোমার হাতদুটো দিয়ে তোমার চোখ বন্ধ করবা? তারপর চলো আমরা একটা হাতির কথা ভাবি।
+
+<p>হাতির কি কি আছে? একটা শুড় আছে, চারটা পা আছে, দুইটা চোখ আছে, একটা লম্বা লেজ আছে - সেটা দিয়ে হাতি মাছি তাড়ায়, আর পেন্ডুলামের মত দোলাতে থাকে কোন কাজ না পেলে। আর হাতির গায়ের রংটা না একদম মাটির মতো। </p>
+
+<p>হাতি কি কি করে? হাতি শুড় উঁচিয়ে বৃংহতি টাইপের ডাক দিতে পারে। হাতি পুটুশ পাটুশ করে কোমড় দুলিয়ে হাঁটতে জানে। হাতি আবার রাজাদেরকে পিঠে নিয়ে হাঁটতেও খুব পছন্দ করে। </p>
+
+<p>তো দেখো, আমরা পুরো আস্ত একটা হাতির বর্ণনা দিয়ে ফেললাম, হাতিটার কি কি আছে আর সে কি কি পারে সেটা দিয়ে।  প্রোগ্রামিং এ মাঝে মাঝে আমাদের হাতি টাইপের কিছু প্রোগ্রাম লেখা লাগে - যেটা কিছু ডাটা রাখতে পারবে (হাতির লেজ, পা, চোখ যেমন তেমন) আর কিছু কাজ করতে পারবে (হাতি যেমন রাজাকে পিঠে নিয়ে হাঁটতে পারে তেমন)। তো আমরা যদি একবার হাতি প্রোগ্রামটাকে লিখে ফেলি - আমাদের আর কখনো ওটাকে নতুন করে লিখতে হবে না। যখনই হাতির দরকার হবে, আমরা হাতি প্রোগ্রামটাকে নিয়ে আসবো। </p>
+
+<p>তো মজা হচ্ছে কি, আমরা এখানে হাতি প্রোগ্রামটাকে একটা জিনিস হিসেব ভাবছি। তাই না? যেমন টেবিল একটা জিনিস, হাতি একটা জিনিস, মানুষ একটা জিনিস। তো এভাবে প্রোগ্রামিং করাটাকে বলে object oriented programming - যেখানে সব প্রোগ্রামরা হচ্ছে একেকটা object - চেয়ার টেবিল কিংবা হাতির মতো।  প্রোগ্রামিং এ একটা অবজেক্ট এর কাছে কিছু ডাটা থাকে (ভ্যারিয়েবল আরকি), আর কিছু ফাংশন থাকে। ফাংশনগুলো হচ্ছে অনেকটা কাজ করার মতো - যেগুলো ওই অবজেক্টটা করতে পারে। </p>
+
+<h2>৮.১ হুকুশ পাকুশের প্রথম অবজেক্ট অরিয়েন্টেড প্রোগ্রামিং </h2>
+
+<p>আসো হুকুশ পাকুশ, আমরা একটা ছোট্ট ক্যালকুলেটর অবজেক্ট বানাই। অবজেক্টের আরেকটা নাম হচ্ছে ক্লাস। আমরা এখন একটা ক্যালকুলেটর ক্লাস নিবো, যার দুইটা ভ্যারিয়েবল থাকবে। আমি চাইলে ভ্যারিয়েবলগুলো পাল্টাতে পারবো, আর ক্যালকুলেটরকে জিজ্ঞেস করতে পারবো, 'ওহে ক্যালকুলেটর, তোমার ভ্যারিয়েবলদের যোগফল কত শুনি?'।</p>
+
+
+<div><textarea id="801" name="801" >class Calculator:
+
+    def set(self, a, b):
+        self.a = a
+        self.b = b
+
+    def add(self):
+        return self.a + self.b
+
+c = Calculator()
+c.set(2, 2)
+
+print c.add()</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode801" class="button"></p>
+<script>
+var editor801 = CodeMirror.fromTextArea(document.getElementById("801"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader801" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output801" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus801" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>ক্লাসের ভেতর ফাংশন লেখার সময় সবসময় ক্লাসটাকে বলে দিতে হয় সে কে। তুমি কি ফিফটি ফার্স্ট ডেট মুভিটা দেখেছো? ওখানে টেন সেকেন্ড টম ছিলো না, যে দশ সেকেন্ড পর পর ভুলে যেতো সে কে? সেরকম যাতে না হয়, সেজন্য পাইথনে আমরা সব সময় self প্যারামিটারটা পাস করতে থাকি। যাতে কখনো ক্লাসটা তার নিজেকে ভুলে না যায়। </p>
+
+<p> ক্লাসটার পরের অংশটাতে আমরা c বলে একটা ভ্যারিয়েবল বানিয়েছি - আর বলে দিয়েছি যে c হচ্ছে আসলে একটা ক্যালকুলেটর টাইপের অবজেক্ট। পরের অংশটুকু সহজ। তুমি যদি c এর কোন একটা জিনিস নাড়াচাড়া করতে চাও - তোমাকে শুধু c এর পরে একটা ডট দিয়ে ভ্যারিয়েবলের নাম বা ফাংশনের নামটা লিখতে হবে। </p>
+
+<p>তুমি জিজ্ঞাসা করতেই পারো, যে কেন আমরা এভাবে লিখছি? এই জিনিস তো ক্লাস না ব্যবহার করেও করা যেতো। ব্যাপারটা অনেকটা এরকম, ধরো রাজার দুইটা হাতি লাগবে একসাথে - আজকে রাজপূত্রকে নিয়ে সে হাতিতে চড়ে পাহাড়ে হাঁটতে যাবে। তখন আমার দুইটা হাতির অস্তিত্ব লাগবে। দুইটা হাতিই হাতি - কিন্তু তারপরও ওরা দুইটা আলাদা হাতি। হাতির আলাদা আলাদা অস্তিত্বকে প্রোগ্রামিং এর ভাষায় বলা হয় আলাদা দুইটা instance।</p>
+
+
+
+<div><textarea id="802" name="802" >class Calculator:
+
+    def set(self, a, b):
+        self.a = a
+        self.b = b
+
+    def add(self):
+        return self.a + self.b
+
+first = Calculator()
+second = Calculator()
+
+first.set(2, 2)
+second.set(5, 12)
+
+print first.add()
+print second.add()</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode802" class="button"></p>
+<script>
+var editor802 = CodeMirror.fromTextArea(document.getElementById("802"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader802" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output802" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus802" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিং আসলে একটা হাতি টাইপের বড় সড় টাইপের জিনিস। অবজেক্ট অরিয়েন্টেড প্রোগ্রামিং নিয়ে একটা মোটাসোটা বই লিখে ফেলা যায়, বাচ্চা কাচ্চাদের ভয় পাইয়ে দেয়া যায়, একটা ইউনিভার্সিটি কোর্স নিয়ে ফেলা যায়, অনেকগুলো লেকচারও দিয়ে ফেলা যায়। কিন্তু আমি সেগুলোর কিছুই করবো না, কারণ আমি শুধু চাচ্ছি তোমার সাথে ওদের পরিচয় করিয়ে দিতে। তোমরা পরিচিত হয়ে বন্ধু হবে নাকি একজন আরেকজনকে ভয় দেখাবে সেটা তোমাদের ব্যাপার। বুঝছো হুকুশ পাকুশ?</p>
+
+<div class="quote">
+And God said, &ldquo;Be fruitful, and multiply&rdquo;.
+<div class="by">Genesis 1:28</div>
+</div>
+
+<h2>৮.১ ইনহেরিটেন্স </h2>
+
+<p>ধরো আমি একটা হাতি চাই, যেই হাতিটার ডানা আছে। ও আমাকে নিয়ে উড়তে পারবে মেঘের ওপর, তারাদের কাছাকাছি। এখন যদি একটা হাতি অলরেডি বানানো থাকে, আমার কিন্তু হাতিটাকে আগাগোড়া বানাতে হবে না। শুধু আগে বানানো হাতিটাকে নিয়ে ওর দুপাশে দুটো ডানা জুড়ে দিতে হবে। তাই না? </p>
+
+<p>এই কন্সেপ্টটাকে বলে ইনহেরিটেন্স (inheritence)। আমরা একটা প্রোগ্রাম নেই, তারপর প্রোগ্রামটার একটা বাচ্চা বানাই, যেই প্রোগ্রামটা সবকিছুই পারবে ওর বাবা প্রোগ্রামটা যা কিছু পারতো, কিন্তু তাকে আমি আরো অনেককিছু শেখাবো যেটা ওর বাবা প্রোগ্রামটা জানতো না।  প্রোগ্রামারের লাভটা হচ্ছে, তাকে পুরো প্রোগ্রামটা কষ্ট করে শুরু থেকে লিখতে হচ্ছে না - শুধু নতুন অংশটুকু লিখতে হচ্ছে।</p>
+
+<p>যেমন ধরো, আমাদের আগের ক্যালকুলেটরটা গুণ করতে জানতো না। কেমন হয় যদি আমরা আরেকটা বাচ্চা বানাই ওই ক্যালকুলেটরটার, যেটা গুণ করতে জানবে? তখন প্রোগ্রামটা হবে এরকম - </p>
+
+
+<div><textarea id="803" name="803" >class Calculator:
+
+    def set(self, a, b):
+        self.a = a
+        self.b = b
+
+    def add(self):
+        return self.a + self.b
+
+
+class NewCalculator(Calculator):
+
+    def multiply(self):
+        return self.a * self.b
+
+c = NewCalculator()
+c.set(2, 3)
+print c.multiply()</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode803" class="button"></p>
+<script>
+var editor803 = CodeMirror.fromTextArea(document.getElementById("803"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader803" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output803" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus803" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p> দেখো, তোমাকে যে সব সময় শুধু নতুন কিছু যোগ করতে হবে তা কিন্তু না। তুমি কোন অংশ নিয়ে পাল্টেও ফেলতে পারো। যেমন ধরো, বাবা হাতিটা সিগারেট খেতো, সেজন্য বাবু হাতি, যে কিনা উড়তে জানে, সেও কি সিগারেট খাবে? কখখনো না! আমরা বাবু হাতিকে লেখার সময় ওই অংশটুকু পাল্টে ফেলতেই পারি।</p>
+
+<p>খেয়াল করো NewCalculator কে ডিক্লেয়ার করার সময় বলে নিতে হচ্ছে ওর বাবার নাম কি। এটা অনেকটা মানুষের নামের শেষ অংশের মতো, last name যেটাকে বলে। যেমন সত্যজিৎ (রায়) - রায় নামটা সে পেয়েছে ওর বাবার কাছ থেকে - ওরকম।</p>
+
+
+<div class="bquote">
+তোমার ঘরে বাস করে কারা - ও মন জানো না <br>
+তোমার ঘরে বসত করে কয় জনা - মন জানো না<br>
+তোমার ঘরে বসত করে কয় জনা?<br><br>
+
+একজনে ছবি আঁকে একমনে - ও হো ও মন<br>
+আরেকজন বসে বসে রঙ মাখে - ও হো ও মন<br>
+ওহো আবার - সেই ছবিখান নষ্ট করে কোন জনা <br>
+কোন জনা?<br><br>
+
+একজন সুর তোলে এক তারে, ও হো ও মন<br>
+আরেকজন মন্দিরাতে তাল তোলো, ও হো ও মন<br>
+ওহ আবার বেসুরা সুর ধরে দেখো কোন জনা<br>
+কোন জনা?<br><br>
+
+তোমার ঘরে বসত করে কয় জনা - মন জানো না!
+<div class="by">লালন ফকির</div>
+</div>
+
+<h2>৮.২ পলিমর্ফিজম</h2>
+
+<p> দেখো হুকুশ পাকুশ, তোমার চারপাশে কত্ত মানুষ। সবাই একইরকম - সবার দুইটা করে হাত, দুইটা করে পা, একটা করে নাক, দুইটা করে চোখ। কিন্তু তারপরও সবাই কত্ত আলাদা না ভাবো? কেও হাসিখুশি, কেউ মুখ গোমড়া। কেউ কিছুতেই মন খারাপ করে না, আর কারো কখনোই মন ভালো হয় না। কেউ কখনোই আশা ছেড়ে দেয় না, আর কেউ কেউ স্বপ্ন দেখতেই জানে না। কিন্তু সবার মূল আকৃতি একই রকম। সবার হাত কাটলে লাল রক্ত বের হয়, মন খারাপ হলে চোখ ফেটে পানি পড়ে।</p>
+
+<p> মাঝে মাঝে আমাদের কিছু প্রোগ্রাম লিখতে হয়, যাদের সবার আকৃতি একই রকম - কিন্তু মানুষের মত তারা সবাই আলাদা আলাদা। সেরকম ক্ষেত্রে আমরা একটা সাধারণ প্রোগ্রাম লিখে নেই, যেটা ওদের মূল আকৃতিটুকু ধরে রাখবে। তারপর বাকিদেরকে লিখি সেই মূল আকৃতির উপর ভিত্তি করে। এই কনসেপ্টটাকে বলে পলিমরফিজম (polymorphism)। </p>
+
+<p> একটা ছোট্ট সহজ উদাহরণ দেই। ধরো আমার বাসায় আমি একটা ছোট্ট চিড়িয়াখানা বানাবো হুকুশ পাকুশের জন্য। আমার একটা বাঘ থাকবে, আর বাঘটা বলবে "হালুম!"। আর থাকবে বিড়াল, ইঁদুর আর একটা ছোট্ট বাচ্চা কুকুর। বিড়ালটা বলবে "মিয়াও!", ইঁদুরটা বলবে "কিঁচ কিঁচ" আর বাচ্চা কুকুরটা বলবে, "হুফ! হুফ!"। আর ওদের সবার একটা করে নাম থাকবে। তো দেখো - ওদের মূল আকৃতিটা হচ্ছে - ওদের প্রত্যেকের নাম আছে আর সবার একটা ডাকও আছে। </p>
+
+<p> তাহলে আমাদের প্রোগ্রামটা হবে এরকম </p>
+
+
+<div><textarea id="804" name="804" >class Pet:
+
+    def __init__(self, name):
+        self.name = name
+
+    def talk(self):
+        pass
+
+
+class Cat(Pet):
+
+    def talk(self):
+        print self.name + ": meow!"
+
+
+class Dog(Pet):
+
+    def talk(self):
+        print self.name + ": hoof! hoof!"
+
+
+class Tiger(Pet):
+
+    def talk(self):
+        print self.name + ": halum!"
+
+
+class Mouse(Pet):
+
+    def talk(self):
+        print self.name + ": kich! kich!"
+
+
+cat = Cat("bilai")
+dog = Dog("kuttush")
+tiger = Tiger("bug")
+mouse = Mouse("idur")
+
+cat.talk()
+dog.talk()
+tiger.talk()
+mouse.talk()</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode804" class="button"></p>
+<script>
+var editor804 = CodeMirror.fromTextArea(document.getElementById("804"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader804" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output804" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus804" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>এখানে __init__ ফাংশনটা হচ্ছে আমাদের আগে একটা set ফাংশন ছিলো না? ঠিক ওরকম। পার্থক্য হচ্ছে, এভাবে লিখলে, ইনস্ট্যান্স তৈরী করার সময়ই সেট করে নেয়া যায়। যেমন দেখো আমরা এখানে অবজেক্টটা তৈরী করার সময়ই ব্র্যাকেটের ভিতরেই নামটা বলে দিচ্ছি। </p>
+
+<p> Pet হচ্ছে আমাদের মূল ক্লাস, যেটার হচ্ছে বাকি সব ক্লাসগুলোর মূল আকৃতি। আমরা এই ধরণের ক্লাসকে বলি অ্যাবস্ট্রাক্ট ক্লাস। বাকি সব ক্লাসগুলোতে আমরা করছি Pet কিভাবে কথা বলবে, সেটা ঠিক করে দিচ্ছি। এইটাই হচ্ছে পলিমর্ফিজম। </p>
+
+<p> পলিমরফিজম কোডকে তুলনামূলকভাবে সহজ আর গোছানো করে দেয়। যখন প্রোগ্রামাররা একটা বড় সিস্টেম তৈরী করে, তখন ডিজাইনটা খুব গুরুত্বপূর্ণ হয়ে যায়। ডিজাইন যদি হিজিবিজি হিজিবিজি হয় তখন কোড করতে, প্রোগ্রামটাকে ঠিকঠাক মতো রান করতে খবর হয়ে যায়। আর যখন ডিজাইন খুব সহজ, সুন্দর আর গুটুশগাটুশ টাইপের হয় তখন কোডগুলোও সহজ আর সুন্দর হয় - তখন কোডটাকে গড়গড় করে কবিতার মতো করে পড়ে ফেলা যায়। আর মুগ্ধ হয়ে তাকিয়ে থাকা যায় অনেক অনেক সময় ধরে। </p>
+
+<h2>৮.৩ পাইথন মডিউলস </h2>
+
+<p>মনে আছে হুকুশ পাকুশ, আমরা লাইব্রেরী ফাংশন দেখেছিলাম আগের চ্যাপ্টারে? পাইথনের লাইব্রেরীতে একইভাবে অনেকগুলো ক্লাস টাইপের প্রোগ্রাম লেখা আছে। সেই প্রোগ্রামগুলোকে বলে মডিউল। একেকটা মডিউলে অনেকগুলো করে ফাংশন থাকে, যেগুলোকে আমরা ক্লাসের ফাংশন নিয়ে যেভাবে কাজ করি, সেভাবে কাজ করতে পারি। আমরা যদি সেই মডিউলগুলোকে ব্যবহার করতে চাই, আমাদের সেগুলো import করতে হবে। </p>
+
+<p> যেমন ধরো তোমার যদি ফ্যাক্টোরিয়াল বের করার জন্য ফাংশন লিখতে হয়, সেটা ইতিমধ্যে পাইথনের লাইব্রেরীতে লেখা আছে math নামের একটা মডিউলে। তাই আমরা নতুন করে আর ওটাকে না লিখে করবো কি,  লাইব্রেরী থেকে ওই মডিউলকে import করে এনে সেটাকে ব্যবহার করে ফেলবো! </p>
+
+
+
+<div><textarea id="805" name="805" >import math
+
+print math.factorial(5)</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode805" class="button"></p>
+<script>
+var editor805 = CodeMirror.fromTextArea(document.getElementById("805"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader805" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output805" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus805" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>পাইথনের পুরো লাইব্রেরিটার খুটিনাটি তুমি পাবে <a href="http://docs.python.org/library/">এই লিংকটাতে</a>। যেমন তুমি যদি সেখান থেকে math মডিউলটাকে ক্লিক করো, তাহলে তুমি <a href="http://docs.python.org/library/math.html">এইটা</a> দেখতে পাবে, যেই মডিউলটা আমরা এই মাত্র ব্যবহার করলাম।</p>
+
+
+<script>
+$(document).ready(function(){
+
+
+$('#runcode801').click(function(){
+  loader = $('#loader801')
+  mystatus = $('#mystatus801')
+  output = $('#output801')
+  codelink = $('#codelink801')
+  beforerun = $('#beforerun801')
+  afterrun = $('#afterrun801')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor801.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode802').click(function(){
+  loader = $('#loader802')
+  mystatus = $('#mystatus802')
+  output = $('#output802')
+  codelink = $('#codelink802')
+  beforerun = $('#beforerun802')
+  afterrun = $('#afterrun802')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor802.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode803').click(function(){
+  loader = $('#loader803')
+  mystatus = $('#mystatus803')
+  output = $('#output803')
+  codelink = $('#codelink803')
+  beforerun = $('#beforerun803')
+  afterrun = $('#afterrun803')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor803.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode804').click(function(){
+  loader = $('#loader804')
+  mystatus = $('#mystatus804')
+  output = $('#output804')
+  codelink = $('#codelink804')
+  beforerun = $('#beforerun804')
+  afterrun = $('#afterrun804')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor804.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode805').click(function(){
+  loader = $('#loader805')
+  mystatus = $('#mystatus805')
+  output = $('#output805')
+  codelink = $('#codelink805')
+  beforerun = $('#beforerun805')
+  afterrun = $('#afterrun805')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor805.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+});
+</script>
+
+
+
+			</div>
+
+			
+
+			<div id="prev">
+				<a href="chap7.html">আগের অংশ</a>
+			</div>
+
+
+			<div id="next">
+				<a href="chap9.html">পরের অংশ</a>
+			</div>
+
+
+		</div>
+
+    
+    
+    </div>
+    </body>
+
+
+
+<!-- Mirrored from hukush-pakush.com/chap8 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+</html>
+
+

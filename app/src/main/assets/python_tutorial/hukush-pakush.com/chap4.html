@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+    
+<!-- Mirrored from hukush-pakush.com/chap4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা">
+
+        <link rel="preload" href="fonts/SolaimanLipi.woff" as="font">
+        <link rel="preload" href="fonts/halum.woff" as="font">
+
+        <title>হুকুশ পাকুশের প্রোগ্রামিং শিক্ষা</title>
+
+        <link rel="stylesheet" href="css/pure-min.css">
+        <link rel="stylesheet" href="css/main-min1bce.css?v=6">
+        <link rel="stylesheet" href="css/night-min.css">
+        <link rel="stylesheet" href="css/codemirror-min.css">
+
+        <script src="js/codemirror-min.js"></script>
+        <script src="js/python-min.js"></script>
+        <script src="js/jquery.js"></script>
+
+        <style type="text/css">
+          .CodeMirror {
+            border: 1px solid #eee;
+          }
+          .CodeMirror-scroll {
+            height: auto;
+            overflow-y: hidden;
+            overflow-x: auto;
+            width: 100%;
+          }
+        </style>
+
+
+      
+      
+
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25498154-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>
+
+    </head>
+
+    <body>
+
+    
+    <div id="container">
+    	<div id="side">
+			 <div id="chapterbox">
+			 	<div class="chapter">
+			 		<a href="chap1.html">অধ্যায় ১ <br>
+			 		<span class="chapterdetails">মানুষ প্রোগ্রামিং কেন করে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap2.html">অধ্যায় ২<br>
+			 		<span class="chapterdetails">কিন্তু হুকুশ পাকুশ কেন প্রোগ্রামিং করবে?</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap3.html">অধ্যায় ৩<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশের প্রথম প্রোগ্রাম</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap4.html">অধ্যায় ৪<br>
+			 		<span class="chapterdetails">আমার নাম ভ্যারিয়েবল</a>
+			 	</div>
+			 	<div class="chapter">
+			 		<a href="chap5.html">অধ্যায় ৫<br>
+			 		<span class="chapterdetails">যদির কথা নদীর জলে</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap6.html">অধ্যায় ৬<br>
+			 		<span class="chapterdetails">লুপায়িত হুকুশ পাকুশ</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap7.html">অধ্যায় ৭<br>
+			 		<span class="chapterdetails">ফাংশন এবং জাদুর বাক্স</a>
+			 	</div>
+
+			 	 <div class="chapter">
+			 		<a href="chap8.html">অধ্যায় ৮<br>
+			 		<span class="chapterdetails">অবজেক্ট এবং হাতি</a>
+			 	</div>
+
+			 	<div class="chapter">
+			 		<a href="chap9.html">অধ্যায় ৯<br>
+			 		<span class="chapterdetails">হুকুশ পাকুশ এখন প্রোগ্রামিং জানে!</a>
+			 	</div>
+
+			 </div>
+		</div>
+    
+
+		<div id="main">
+      
+      
+			<div id="story">
+			
+
+<div class="btquote">
+হিজি বিজ্ বিজ্ বলল, &ldquo;একজনের মাথার ব্যারাম ছিল, সে সব জিনিসের নামকরণ করত। তার জুতোর নাম ছিল অবিমৃষ্যকারিতা, তার ছাতার নাম ছিল প্রত্যুত্পন্নমতিত্ব, তার গাড়ুর নাম ছিল পরমকল্যাণবরেষু- কিন্তু যেই তার বাড়ির নাম দিয়েছে কিংকর্তব্যবিমূঢ় অমনি ভূমিকম্প হয়ে বাড়িটাড়ি সব পড়ে গিয়েছে। হোঃ হোঃ হোঃ হো---।&rdquo;
+<div class="by">  সুকুমার রায়</div>
+</div>
+
+<h1>৪ আমার নাম ভ্যারিয়েবল, আমি একটা কবিতা বলবো</h1>
+
+
+<p> এবার চলো আমরা তোমার লেখা প্রথম প্রোগ্রামটা অল্পিকটু পাল্টাই। ধরো আমরা একটা হাসিখুশি প্রোগ্রাম লিখছি, যেটা করবে কি - যখনই আমাদের বাসায় যখন একটা নতুন মানুষ আসবে, তাকে নাম ধরে  হ্যালো বলবে। ধরো হুকুশ পাকুশ ঢুকলে সে বলবে, &ldquo;হ্যালো হুকুশ পাকুশ&rdquo;, ফকির ঢুকলে বলবে, &ldquo;হ্যালো ফকির&rdquo;। খেয়াল করো, এখানে নামটা হচ্ছে আমাদের ভ্যারিয়েবল।</p>
+
+<p> আসো লিখি - </p>
+
+
+<div><textarea id="401" name="401" >name = "hukush-pakush"
+print "hello " + name</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode401" class="button"></p>
+<script>
+var editor401 = CodeMirror.fromTextArea(document.getElementById("401"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader401" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output401" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus401" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>এখন তুমি যখনই name ভ্যারিয়েবলটাকে পাল্টাবে আমাদের হাসিখুশি প্রোগ্রামটা সেই নতুন মানুষটাকে হ্যালো বলবে। নামটা পাল্টেই দেখো না কি হয়! এখানে সমান চিহ্ণ দিয়ে আমরা বুঝাচ্ছি যে সমান চিহ্ণের ডান পাশের ডাটাকে আমরা বাম পাশের ভ্যারিয়েবলটাতে রাখবো। বুঝছো হুকুশ পাকুশ?</p>
+
+<p> মজার ব্যাপার হচ্ছে কি, এই ভ্যারিয়েবলগুলোর নাম দেয়া এক বিশাল ঝক্কির ব্যাপার। কারণ এমনভাবে ওদের নাম দিতে হয়, যাতে কেউ পড়লেই বুঝতে পারে ওই কবুতরের খোপে যেই ডাটাটুকু রাখবো, সেটার কাজ কি। যেমন ধরো আমি যদি আগের প্রোগ্রামটা পাল্টে যদি লিখতাম - </p>
+
+
+<div><textarea id="402" name="402" >thecakeisalie = "hukush-pakush"
+print "hello " + thecakeisalie</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode402" class="button"></p>
+<script>
+var editor402 = CodeMirror.fromTextArea(document.getElementById("402"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader402" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output402" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus402" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p> প্রোগ্রামটা একই কাজ করবে। কিন্তু যে মানুষটা পড়ে বুঝতে চাইবে প্রোগ্রামটা কি করছে সে বেচারা হয়তো মাথার চুল ছিঁড়ে ফেলবে বুঝতে the cake is a lie এর মানে কি হতে পারে?</p>
+
+
+<div class="quote">
+Love is real, unless declared an integer.
+<div class="by"> Anonymous</div> </div>
+
+<h2>৪.১ ভ্যারিয়েবল এবং তার নাতিপুতি</h2>
+
+<p> প্রোগ্রামাররা যখন ডাটা নিয়ে কাজ করে, তখন একেকটা ডাটা একেকভাবে রাখতে হয়ে কম্পিউটারের মেমরিতে। যেমন ধরো, একটা real number (যেমন ৩.১৪১৬) কে নিয়ে আমি যখন কাজ করবো - তখন আমার দশমিকের পর সংখ্যাগুলো মনে রাখতে হচ্ছে অনেকগুলো ঘর পর্যন্ত। আবার দেখো যখন integer ( পূর্ণ সংখ্যা - ১,২,৩,৪ ) নিয়ে কাজ করা লাগে, তখন আমাদের দশমিকের পর কিছুই মনে রাখতে হচ্ছে না। সাধারণত বেশিরভাগ প্রোগ্রামিং ভাষায় কম্পিউটারকে বলে দিতে হয় আমরা যেই ভ্যারিয়েবলটা ব্যবহার করবো, সেটা কি ধরণের ডাটা রাখবে। </p>
+
+<p> পাইথনের মজা হচ্ছে কি, পাইথনে না কিচ্ছু বলা লাগে না। পাইথনের ফিলোসফি হচ্ছে, কেউ যদি হাঁসের মত প্যাকপ্যাক করে আর সে যদি হাঁসের মতো করে পানি ঝাড়ে গা থেকে, তাহলে সে হাঁস। পাইথন ভ্যারিয়েবলটার কান্ডকীর্তি দেখেই বুঝে নেয় ভ্যারিয়েবলটা কোন টাইপের। তারপরও আমি তোমাকে এই জিনিসটা বলে নিলাম, কারণ তোমার পাইথনের পর হয়তো আরো অনেক প্রোগ্রামিং ভাষা শিখতে হবে। তুমি C বা C++ এ গিয়ে দেখবে এই অংশটুকু পাইথনের থেকে আলাদা।</p>
+
+<p>তুমি যদি কোন ডাটার টাইপ জানতে চাও এভাবে লিখলেই ডাটার টাইপ বের হয়ে আসবে। </p>
+
+
+
+<div><textarea id="403" name="403" >print type(23)
+print type(23.3434)
+print type("hukush-pakush")
+print type(True)</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode403" class="button"></p>
+<script>
+var editor403 = CodeMirror.fromTextArea(document.getElementById("403"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader403" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output403" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus403" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<h2>৪.২ লিস্ট</h2>
+
+<p>ধরো আমি কাওরান বাজারের জন্য একটা প্রোগ্রাম লিখছি। সেখানে ডাটা হিসেবে পাঁচশটা ফলের নাম রাখতে হবে আমার। এখন বসে বসে পাঁচশটা আলাদা আলাদা ভ্যারিয়েবলের নাম লিখতে গেলে আমার কানের পোকা বের হয়ে যাবে। </p>
+
+<p> তো আমরা করি কি একটা লিস্ট ডিক্লেয়ার করি। সেই লিস্টির সবাই হচ্ছে একটা করে ফল। যেমন পাঁচটা ফলের জন্য লিস্টটা হবে এমন। </p>
+
+
+<div><textarea id="404" name="404" ># this is a simple list
+fruits = ["apple", "orange", "banana", "mango", "cherry"]</textarea></div>
+<script>
+var editor404 = CodeMirror.fromTextArea(document.getElementById("404"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+</script>
+
+
+
+
+<p>এই জিনিসটাকে পাইথনে লিস্ট বলে, কিন্তু অন্য ভাষাগুলোতে (যেমন সি++, জাভাতে) বলে অ্যারে। আমরা যদি প্রথম ভ্যারিয়বলটাকে প্রিন্ট করতে চাই আমাদের লিখতে হবে।</p>
+
+
+<div><textarea id="405" name="405" >print fruits[0]</textarea></div>
+<script>
+var editor405 = CodeMirror.fromTextArea(document.getElementById("405"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+</script>
+
+
+
+
+<p>দ্বিতীয়টার জন্য fruits[1]। এরকম করে পাঁচ নাম্বারটার জন্য fruits[4]। অনেকটা এরকম ভাবে চিন্তা করো, তুমি একটা লিফটে করে ছ'তালায় যাবা কিন্তু সবাই ছ'তালাকে বলে fifth floor কারণ একতালা কে ০ তালা ধরা হয়। যেমন নিচের কোডটাতে আমরা প্রথম আর শেষ ফলের নামকে প্রিন্ট করছি।</p>
+
+
+
+<div><textarea id="406" name="406" >fruits = ["apple", "orange", "banana", "mango", "cherry"]
+
+print fruits[0] + " " + fruits[4]</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode406" class="button"></p>
+<script>
+var editor406 = CodeMirror.fromTextArea(document.getElementById("406"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader406" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output406" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus406" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+
+<p>উপরে হ্যাশ চিহ্ণ(#) টা দেখে অবাক হচ্ছো না হুকুশ পাকুশ? আমরা প্রোগ্রামাররাও মাঝে মাঝে খুব স্বাভাবিক ভাষায় কথা বলি। তারপর গুটিগুটি করে ছোট্ট কিছু কথা লিখে রাখি স্বাভাবিক ভাষায় যেগুলো কিন্তু কোডের অংশ নয় - কিন্তু সেগুলো সাহায্য করে বুঝতে আমরা কোডটাতে আসলে কি করছি। পাইথনে ওরকম গুটিশুটি মন্তব্য লেখার জন্য '#' (হ্যাশ) দিয়ে শুরু করতে হয়। হ্যাশের পর সবকিছুকে কম্পাইলার পাত্তা দেয় না, বুঝে নেয় ওটা হচ্ছে একটা কমেন্ট - ওটা প্রোগ্রামার ওর বোঝার জন্য লিখেনি। </p>
+
+
+<h2>৪.৩ ভ্যারিয়েবল এর আসল ব্যবহার</h2>
+
+<p>ভ্যারিয়েবলের আসল ব্যবহার হচ্ছে যখন আমরা জানি আমাদের কি ধরণের ডাটা নিয়ে কাজ করতে হবে, কিন্তু জানি না ডাটা ঠিক কত হবে। যেমন ধরো আমি তোমাকে যদি বলি একটা ত্রিভূজের ক্ষেত্রফল (area) বের করো। তুমি আমাকে জিজ্ঞেস করবে কি, ত্রিভূজের <i>ভূমি</i> আর <i>উচ্চতা</i> কত, তাই না? ত্রিভূজের ক্ষেত্রফল হচ্ছে ভূমি উচ্চতার গুণফলকে দুই দিয়ে ভাগ করলে যেটা থাকবে সেটা, তাই না?</p>
+
+<p>তো দেখো, এখানে <i>ভূমি</i> আর <i>উচ্চতা</i> হচ্ছে ভ্যারিয়েবল। এই দুইটা যেভাবে ইচ্ছা পাল্টাতে পারে। কিন্তু আমাদের কাজটা একই থাকবে। তো এই প্রোগ্রামটা হবে এরকম - </p>
+
+
+<div><textarea id="407" name="407" >base = 232.5
+height = 1200
+area = 0.5 * base * height
+
+print area</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode407" class="button"></p>
+<script>
+var editor407 = CodeMirror.fromTextArea(document.getElementById("407"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader407" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output407" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus407" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>প্রোগ্রামিং এর সময় আমরা গুণ চিহ্ণকে বুঝাই * এই চিহ্ণটা দিয়ে। তুমি এখন base আর height এর মান পাল্টাও - দেখো প্রোগ্রামটা তখনো তোমাকে ঠিকই ক্ষেত্রফলটা বের করে দিচ্ছে। </p>
+
+<p> আমি যখন কলেজে পড়তাম, তখন আমাদের ফাংশনের ছবি আঁকতে হতো, সেগুলো খুব বোরিং হতো জানো!  সেগুলো থাকতো এরকম যে আমাকে y = 2x^3 + 6x^2 + 34x - 345 এর মান বের করতে হবে কিছু নির্দিষ্ট x এর মানের জন্য। এখন সমস্যা হচ্ছে ক্যালকুলেটরে এই জিনিস বারবার টিপাটিপি করতে গেলে আবারও তোমার কানের পোকা বের হয়ে যাবে। তোমার মনে হবে, পৃথিবীটা একটা দূর্বিষহ জায়গা!</p>
+
+<p> এই জিনিসটা প্রোগ্রামিং করে খুব সহজে করা যায়। ঠিক এই কাজটা এই প্রোগ্রামটা করতে পারে। তোমার শুধু x এর মান পাল্টে দেবে, আর প্রোগ্রামটা তোমার জন্য খুশিমনে হিসেবনিকেশ করে তোমাকে মান বের করে দেবে। কি মজা না হুকুশ পাকুশ? কেও করবে অমন? বলো, বলো, বলো?</p>
+
+
+<div><textarea id="408" name="408" >x = 3
+y = 2 * x * x * x + 6 * x * x + 34 * x - 345
+
+print y</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode408" class="button"></p>
+<script>
+var editor408 = CodeMirror.fromTextArea(document.getElementById("408"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader408" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output408" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus408" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<p>এই কোডটা এভাবেও লেখা যায়। x**3 মানে হচ্ছে x^3 </p>
+
+
+<div><textarea id="409" name="409" >x = 3
+y = 2 * x**3 + 6 * x**2 + 34 * x - 345
+
+print y</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode409" class="button"></p>
+<script>
+var editor409 = CodeMirror.fromTextArea(document.getElementById("409"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader409" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output409" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus409" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<h2>৪.৪ ডিকশনারি </h2>
+
+<p>পাইথনে আরেকটা খুব কাজের ডাটা টাইপ আছে। ধরো আমার একটা ফোনবুক টাইপের প্রোগ্রাম লাগবে। আমি ফোনবুককে যদি আমার বন্ধুর নামটা বলি, সে আমাকে ওর নাম্বারটা বলবে। এটা পাইথনে লেখা যায় এই ভাবে - </p>
+
+
+<div><textarea id="410" name="410" >phonebook = {
+    'fahim': '01717 222222',
+    'wasi': '01717 333333',
+    'shafee': '01912 444444',
+    'shezan': '01671 555555'
+}
+
+print phonebook['wasi']</textarea></div>
+<p><input type="submit" value="কম্পাইল" id="runcode410" class="button"></p>
+<script>
+var editor410 = CodeMirror.fromTextArea(document.getElementById("410"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: false},
+        lineNumbers: true,
+        indentUnit: 4,
+        tabMode: "shift",
+        matchBrackets: true
+      });
+
+</script>
+
+<div id="loader410" class="loader" style="display:none;">
+  <div class='uil-ring-css' style='transform:scale(0.6);'><div></div></div>
+    কম্পাইল হচ্ছে। ইকটু অপেক্ষা করো।
+</div>
+<div id="output410" class="output" style="display:none;">
+আউটপুট
+</div>
+<div id="mystatus410" class="mystatus" style="display:none;">
+</div>
+
+
+
+
+
+<script>
+$(document).ready(function(){
+
+
+$('#runcode401').click(function(){
+  loader = $('#loader401')
+  mystatus = $('#mystatus401')
+  output = $('#output401')
+  codelink = $('#codelink401')
+  beforerun = $('#beforerun401')
+  afterrun = $('#afterrun401')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor401.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+$('#runcode402').click(function(){
+  loader = $('#loader402')
+  mystatus = $('#mystatus402')
+  output = $('#output402')
+  codelink = $('#codelink402')
+  beforerun = $('#beforerun402')
+  afterrun = $('#afterrun402')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor402.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+
+$('#runcode403').click(function(){
+  loader = $('#loader403')
+  mystatus = $('#mystatus403')
+  output = $('#output403')
+  codelink = $('#codelink403')
+  beforerun = $('#beforerun403')
+  afterrun = $('#afterrun403')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor403.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+
+$('#runcode406').click(function(){
+  loader = $('#loader406')
+  mystatus = $('#mystatus406')
+  output = $('#output406')
+  codelink = $('#codelink406')
+  beforerun = $('#beforerun406')
+  afterrun = $('#afterrun406')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor406.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+
+$('#runcode407').click(function(){
+  loader = $('#loader407')
+  mystatus = $('#mystatus407')
+  output = $('#output407')
+  codelink = $('#codelink407')
+  beforerun = $('#beforerun407')
+  afterrun = $('#afterrun407')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor407.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+
+$('#runcode408').click(function(){
+  loader = $('#loader408')
+  mystatus = $('#mystatus408')
+  output = $('#output408')
+  codelink = $('#codelink408')
+  beforerun = $('#beforerun408')
+  afterrun = $('#afterrun408')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor408.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+
+$('#runcode409').click(function(){
+  loader = $('#loader409')
+  mystatus = $('#mystatus409')
+  output = $('#output409')
+  codelink = $('#codelink409')
+  beforerun = $('#beforerun409')
+  afterrun = $('#afterrun409')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor409.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+
+
+$('#runcode410').click(function(){
+  loader = $('#loader410')
+  mystatus = $('#mystatus410')
+  output = $('#output410')
+  codelink = $('#codelink410')
+  beforerun = $('#beforerun410')
+  afterrun = $('#afterrun410')
+
+  loader.show()
+  mystatus.hide()
+  beforerun.hide()
+  output.hide();
+  codelink.hide()
+
+  setTimeout(
+  function()
+  {
+      $.ajax({
+        url : '/submit',
+        data : {
+        code:editor410.getValue(),
+      },
+      type : 'POST',
+      dataType : 'json',
+      success : function(response) {
+        loader.hide()
+        mystatus.show()
+        output.show()
+        mystatus.html(response.ajax_resp);
+      },
+      error : function(response) {
+        loader.hide()
+        mystatus.html("হায় হায়! output.hide(); কিছু একটা কাজ করছে না! :("); output.hide();
+        loader.hide()
+      },
+      complete : function(response) {
+        mystatus.html(response.ajax_resp);
+        loader.hide()
+      }
+      });
+     // This will randomly distribute load on server.
+  }, 3000 +  Math.floor((Math.random() * 3000) + 1));
+});
+
+
+
+
+
+
+
+});
+</script>
+
+
+
+			</div>
+
+			
+
+			<div id="prev">
+				<a href="chap3.html">আগের অংশ</a>
+			</div>
+
+
+			<div id="next">
+				<a href="chap5.html">পরের অংশ</a>
+			</div>
+
+
+		</div>
+
+    
+    
+    </div>
+    </body>
+
+
+
+<!-- Mirrored from hukush-pakush.com/chap4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 May 2017 04:11:39 GMT -->
+</html>
+
+
